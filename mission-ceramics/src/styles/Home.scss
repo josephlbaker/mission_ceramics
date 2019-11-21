@@ -1,0 +1,20 @@
+h1 {
+  margin: 0;
+  padding-top: 20px;
+}
+
+.shop-now-btn {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65);
+}
+
+.hero-image {
+  background-image: url('../images/hero-image.jpeg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
