@@ -10,11 +10,34 @@ h1 {
   background: rgb(28, 184, 65);
 }
 
-.hero-image {
-  background-image: url('../images/hero-image.jpeg');
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+// .hero-image {
+//   background-image: url('../images/hero-image.jpeg');
+//   height: 100vh;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   position: relative;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 50%;
+// }
+
+#columns {
+	column-width: 320px;
+	column-gap: 15px;
+  width: 90%;
+	max-width: 1100px;
+	margin: 50px auto;
+}
+
+div#columns img {
+  width: 100%; height: auto;
+  margin: 0 2px 15px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 750px) {
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
 }
