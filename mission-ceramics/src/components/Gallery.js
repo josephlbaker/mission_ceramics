@@ -5,7 +5,9 @@ export default class Gallery extends Component {
   render() {
     return (
       <div className="gallery-container">
-        Gallery
+        <h3>New for Fall 2019</h3>
+        <h2>Morning Bloom</h2>
+        <button className="shop-now-btn">SHOP NOW</button>
       </div>
     )
   }
