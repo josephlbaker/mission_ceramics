@@ -1,6 +1,7 @@
 .gallery-container {
   width: 80vw;
   font-family: 'Alegreya', serif;
+  padding-left: 20%;
 }
 
 .logo-name {
@@ -9,8 +10,74 @@
 }
 
 .shop-now-btn {
+  position: relative;
+  border: 0;
+  padding: 10px 25px;
+  display: inline-block;
+  text-align: center;
   color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background-color: #B92227;
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+}
+
+.featured-product {
+  margin-bottom: 50px;
+}
+
+.featured-product h2 {
+  font-size: 48px;
+}
+
+.featured-product h3 {
+  font-size: 30px;
+}
+
+.featured-product h2,
+.featured-product h3,
+.featured-product button {
+  margin: 10px;
+}
+
+.featured-image {
+  width: 60%;
+  margin-top: 50px;
+}
+
+.featured-column1 {
+  padding-top: 120px;
+  padding-left: 120px;
+  float: left;
+  width: 30%;
+}
+
+.featured-column2 {
+  float: right;
+}
+
+.featured-product:after, .gallery-items-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gallery-items-column {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+  margin-bottom: 50px;
+}
+
+.gallery-item-image {
+  width: 66.66%;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.gallery-item-image:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }

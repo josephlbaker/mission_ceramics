@@ -1,26 +1,46 @@
+.nav-container {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
 .nav-links {
   list-style: none;
   padding-inline-start: 0;
   width: 30%;
   margin: auto;
-  margin-top: 40px;
-  font-family: 'Alegreya', serif;
+  // font-family: 'Alegreya', serif;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 80px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-.nav-container {
-  width: 20vw;
-  height: 100vh;
+.nav-links li {
+  margin: 0 0 10px 0;
 }
 
 .logo {
   display: block;
   margin: auto;
   padding-top: 80px;
+  margin-bottom: 32px;
+  width: 10rem;
 }
 
+.active li{
+  color: #B92227;
+  text-decoration: underline;
+}
