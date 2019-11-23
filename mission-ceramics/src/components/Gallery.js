@@ -7,14 +7,16 @@ export default class Gallery extends Component {
     return (
       <div className="gallery-container">
         <div className="featured-product">
-          <div className="featured-column1" id="featured-text-column">
-            <h3>New for Fall 2019</h3>
-            <h2>Morning Bloom</h2>
-            <button className="shop-now-btn">SHOP NOW</button>
+          <div className="hero-image">
+            <div className="featured-column1" id="featured-text-column">
+              <h3>New for Fall 2019</h3>
+              <h2>Morning Bloom</h2>
+              <button className="shop-now-btn">SHOP NOW</button>
+            </div>
           </div>
-          <div className="featured-column2" id="featured-image-column">
+          {/* <div className="featured-column2" id="featured-image-column">
             <img className="featured-image" src="http://atlas-content-cdn.pixelsquid.com/stock-images/medieval-ceramic-wine-jug-growler-7GYwGnB-600.jpg" alt="featured-product" />
-          </div>
+          </div> */}
         </div>
         <div className="gallery-items">
           <div className="gallery-items-row">
