@@ -54,18 +54,19 @@ h2 {
 
 #columns {
 	column-width: 320px;
-	column-gap: 15px;
+	column-gap: 30px;
   width: 90%;
 	max-width: 1100px;
   margin: 50px auto;
   margin-top: 60px;
   margin-right: 60px;
+  margin-left: 0;
 }
 
 div#columns img {
   width: 100%;
   height: auto;
-  margin: 0 2px 15px;
+  margin: 0 0 25px;
   display: inline-block;
 }
 

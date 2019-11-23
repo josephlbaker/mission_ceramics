@@ -14,6 +14,9 @@ export default class Nav extends Component {
           <NavLink to="/about" activeClassName="active"><li>About</li></NavLink>
           <NavLink to="/contact" activeClassName="active"><li>Contact</li></NavLink>
         </ul>
+        {/* <div class="wrapper">
+          <p className="copyright">Copyright © 2019<br />All rights reserved.</p>
+        </div> */}
       </nav>
     )
   }
