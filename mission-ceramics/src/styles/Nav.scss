@@ -1,7 +1,7 @@
 .toolbar {
   position: fixed;
   width: 100%;
-  background: gray;
+  background: transparent;
   height: 56px;
   top: 0;
   left: 0;
@@ -14,11 +14,6 @@
   padding: 0 1rem;
 }
 
-.toolbar__logo {
-  color: white;
-  font-size: 1.5rem;
-}
-
 .spacer {
   flex: 1;
 }
@@ -28,6 +23,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  padding-right: 2vw;
 }
 
 .toolbar_navigation-items li {
@@ -35,7 +31,7 @@
 }
 
 .toolbar_navigation-items a {
-  color: white;
+  color: #B92227;
   text-decoration: none;
 }
 

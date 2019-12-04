@@ -8,7 +8,6 @@ export default class Nav extends Component {
     return (
       <header className="toolbar">
         <nav className="toolbar__navigation">
-          <div className="toolbar__logo">LOGO</div>
           <div className="spacer" />
           <div className="toolbar_navigation-items">
             <ul>
