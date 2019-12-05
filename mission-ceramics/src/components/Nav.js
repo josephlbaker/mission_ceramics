@@ -4,9 +4,23 @@ import DrawerToggleButton from './DrawerToggleButton';
 import '../styles/Nav.scss';
 
 export default class Nav extends Component {
+  state = {
+    isTop: true
+  };
+
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 10;
+      if (isTop !== this.state.isTop) {
+        this.setState({ isTop })
+      }
+    });
+  }
+
   render() {
+    let className = this.state.isTop ? 'toolbar' : 'toolbar scrolled';
     return (
-      <header className="toolbar">
+      <header className={className}>
         <nav className="toolbar__navigation">
           <div className="spacer" />
           <div className="toolbar_navigation-items">

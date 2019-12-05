@@ -5,6 +5,12 @@
   height: 56px;
   top: 0;
   left: 0;
+  transition: all 0.5s
+}
+
+.toolbar.scrolled {
+  background: gray;
+  transition: all 0.5s
 }
 
 .toolbar__navigation {
