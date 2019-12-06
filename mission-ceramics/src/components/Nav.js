@@ -10,7 +10,7 @@ export default class Nav extends Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 10;
+      const isTop = window.scrollY < 180;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop })
       }
@@ -18,10 +18,11 @@ export default class Nav extends Component {
   }
 
   render() {
-    let className = this.state.isTop ? 'toolbar' : 'toolbar scrolled';
+    let className = this.state.isTop ? 'toolbar__logo' : 'toolbar__logo scrolled';
     return (
-      <header className={className}>
+      <header className="toolbar">
         <nav className="toolbar__navigation">
+          <div className={className}>Mission Ceramics</div>
           <div className="spacer" />
           <div className="toolbar_navigation-items">
             <ul>

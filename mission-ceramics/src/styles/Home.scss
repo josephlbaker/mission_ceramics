@@ -4,7 +4,7 @@
 
 // HEADER
 .home-header {
-  height: 45vh;
+  height: 350px;
   background: #FFFAEF;
 }
 
@@ -29,18 +29,13 @@
 
 // FEATURED PRODUCT
 .featured-product {
-  // padding-top: 10vh;
-  height: 55vh;
+  height: 420px;
 }
 
 .featured-column1 {
   float: left;
   width: 50%;
 }
-
-// #featured-text-column {
-//   padding-top: 4vh;
-// }
 
 .featured-column1 h2,
 .featured-column1 h3,
@@ -96,13 +91,17 @@
 
 .featured-column1,
 .featured-column2 {
-  padding-top: 10vh;
+  padding-top: 40px;
 }
 
 .featured-image {
   width: 50%;
   display: block;
   margin: 0 auto;
+}
+
+.featured-image-mobile {
+  display: none;
 }
 
 // HOME ITEMS
@@ -115,11 +114,11 @@
   float: left;
   text-align: center;
   width: 30%;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 }
 
 .home-item-image {
-  width: 66.66%;
+  width: 70%;
   margin: 0 auto;
   opacity: 1;
   transition: opacity .25s ease-in-out;
@@ -138,33 +137,34 @@
 }
 
 // MEDIA QUERIES
+
 @media (max-width: 1200px) {
   .home-header {
-    height: 40vh;
+    height: 320px;
   }
 
   .featured-product {
-    height: 35vh;
+    height: 380px;
   }
 }
 
 @media (max-width: 1024px) {
   .home-header {
-    height: 40vh;
+    height: 280px;
   }
 
   .featured-product {
-    height: 35vh;
+    height: 320px;
   }
 }
 
 @media (max-width: 900px) {
   .home-header {
-    height: 40vh;
+    height: 240px;
   }
 
   .featured-product {
-    height: 40vh;
+    height: 300px;
   }
 }
 
@@ -179,6 +179,47 @@
   }
   .home-items-row {
     display: block;
+  }
+  .home-header {
+    display: none;
+  }
+  .featured-column1 {
+    width: 100%;
+    padding-top: 96px;
+  }
+  .featured-column2 {
+    padding: 0;
+  }
+  .featured-column1 h2 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+
+  .featured-column1 h3 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .featured-column1 p {
+    font-size: 14px;
+    width: 300px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .featured-image {
+    display: none;
+  }
+  .featured-image-mobile {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .shop-now-btn-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
 

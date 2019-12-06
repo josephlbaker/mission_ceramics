@@ -1,16 +1,32 @@
 .toolbar {
+  font-family: 'Alegreya', serif;
   position: fixed;
   width: 100%;
-  background: transparent;
+  background: #FFFAEF;
   height: 56px;
   top: 0;
   left: 0;
-  transition: all 0.5s
+  transition: all 0.5s;
+  z-index: 1000;
 }
 
-.toolbar.scrolled {
-  background: gray;
-  transition: all 0.5s
+// .toolbar.scrolled {
+//   background: #FFFAEF;
+//   transition: all 0.5s
+// }
+
+.toolbar__logo {
+  opacity: 0;
+  color: #B92227;
+  font-size: 32px;
+  font-weight: 500;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.toolbar__logo.scrolled {
+  opacity: 1;
+  color: #B92227;
+  z-index: 500;
 }
 
 .toolbar__navigation {
@@ -50,6 +66,11 @@
 @media (max-width: 768px) {
   .toolbar_navigation-items {
     display: none;
+  }
+  .toolbar__logo {
+    opacity: 1;
+    font-size: 32px;
+    font-weight: 500;
   }
 }
 

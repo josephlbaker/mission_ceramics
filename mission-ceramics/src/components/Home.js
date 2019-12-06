@@ -18,6 +18,7 @@ export default class Home extends Component {
           <div className="featured-column1" id="featured-text-column">
             <h3>New for Fall 2019</h3>
             <h2>Morning Bloom</h2>
+            <img src={FeaturedImage} alt="home-item" className="featured-image-mobile" />
             <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
             <div className="shop-now-btn-wrapper"><button className="shop-now-btn">SHOP NOW</button></div>
           </div>
