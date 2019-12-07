@@ -1,5 +1,4 @@
 .gallery-container {
-  margin-top: 56px;
   font-family: 'Alegreya', serif;
 }
 
@@ -23,11 +22,11 @@
 	column-width: 320px;
 	column-gap: 30px;
   width: 90%;
-	max-width: 1100px;
+	// max-width: 1100px;
   margin: 50px auto;
   margin-top: 60px;
-  margin-right: 60px;
-  margin-left: 0;
+  // margin-right: 60px;
+  // margin-left: 0;
 }
 
 div#columns img {
@@ -37,7 +36,10 @@ div#columns img {
   display: inline-block;
 }
 
-@media screen and (max-width: 750px) {
-  #columns { column-gap: 0px; }
+@media screen and (max-width: 768px) {
+  // #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
+  .gallery-container {
+    padding-top: 30px;
+  }
 }

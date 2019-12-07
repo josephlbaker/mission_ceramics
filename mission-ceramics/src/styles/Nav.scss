@@ -8,6 +8,7 @@
   left: 0;
   transition: all 0.5s;
   z-index: 1000;
+  font-size: 22px;
 }
 
 // .toolbar.scrolled {
@@ -59,7 +60,7 @@
 
 .toolbar_navigation-items a:hover,
 .toolbar_navigation-items a:active {
-  color: orange;
+  color: #696969;
 }
 
 // MEDIA QUERIES

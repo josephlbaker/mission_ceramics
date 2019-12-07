@@ -1,10 +1,11 @@
 .side-drawer {
+  font-family: 'Alegreya', serif;
   height: 100%;
-  background: red;
+  background: #ffffff;
   position: fixed;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 40%;
   max-width: 400px;
   z-index: 200;
   transform: translateX(100%);
@@ -29,14 +30,14 @@
 }
 
 .side-drawer a {
-  color: orange;
+  color: #B92227;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active {
-  color: purple;
+  color: #696969;
 }
 
 @media (min-width: 769px) {

@@ -16,7 +16,7 @@ export default class Home extends Component {
         </div>
         <div className="featured-product">
           <div className="featured-column1" id="featured-text-column">
-            <h3>New for Fall 2019</h3>
+            <h3>NEW FOR FALL 2019</h3>
             <h2>Morning Bloom</h2>
             <img src={FeaturedImage} alt="home-item" className="featured-image-mobile" />
             <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
@@ -43,7 +43,22 @@ export default class Home extends Component {
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
           </div>
         </div>
-        <img src={Cityscape} alt="cityscape" className="cityscape-image" />
+        <div className="newsletter-registration-wrapper">
+          <div className="newsletter-registration">
+            <div className="newsletter-registration-column1">
+              <h3>JOIN NOW!</h3>
+              <h2>Newsletter</h2>
+            </div>
+            <div className="newsletter-registration-column2">
+              <p>Stay up to date with Mission Ceramics. Get early access to open studios, exhibitions, and new releases.</p>
+            </div>
+          </div>
+          <div className="newsletter-registration-inputs">
+            <input type="text" className="email-form" placeholder="EMAIL"></input>
+            <button className="subscribe-button">SUBSCRIBE</button>
+          </div>
+        </div>
+        {/* <img src={Cityscape} alt="cityscape" className="cityscape-image" /> */}
       </div>
     )
   }

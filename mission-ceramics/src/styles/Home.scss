@@ -4,7 +4,7 @@
 
 // HEADER
 .home-header {
-  height: 350px;
+  height: 300px;
   background: #FFFAEF;
 }
 
@@ -13,7 +13,7 @@
   width: 400px;
   margin: 0;
   padding-left: 8vw;
-  padding-top: 8vh;
+  padding-top: 6vh;
   font-size: 8vw;
   color: #B92227;
   line-height: 8vw;
@@ -29,12 +29,12 @@
 
 // FEATURED PRODUCT
 .featured-product {
-  height: 420px;
+  height: 500px;
 }
 
 .featured-column1 {
   float: left;
-  width: 50%;
+  width: 50vw;
 }
 
 .featured-column1 h2,
@@ -71,7 +71,7 @@
   color: white;
   font-family: 'Alegreya', serif;
   font-size: 18px;
-  border-radius: 4px;
+  border-radius: 15px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: #B92227;
 }
@@ -84,14 +84,15 @@
 
 .featured-column2 {
   float: left;
-  width: 50%;
+  width: 50vw;
   display: block;
   margin: 0 auto;
 }
 
 .featured-column1,
 .featured-column2 {
-  padding-top: 40px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .featured-image {
@@ -108,6 +109,7 @@
 .home-items-row {
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 .home-items-column {
@@ -136,25 +138,104 @@
   width: 100%;
 }
 
-// MEDIA QUERIES
-
-@media (max-width: 1200px) {
-  .home-header {
-    height: 320px;
-  }
-
-  .featured-product {
-    height: 380px;
-  }
+// NEWSLETTER REGISTRATION
+.newsletter-registration,
+.newsletter-registration-inputs {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
 }
 
-@media (max-width: 1024px) {
+.newsletter-registration h2 {
+  padding-left: 8vw;
+  font-size: 4vw;
+  color: #B92227;
+  margin: 0;
+  width: 200px;
+}
+
+.newsletter-registration h3 {
+  padding-left: 8vw;
+  font-size: 2vw;
+  color: #B92227;
+  margin: 0;
+  width: 200px;
+}
+
+.newsletter-registration p {
+  font-size: 1.5vw;
+  width: 600px;
+  margin-right: 8vw;
+  text-align: justify;
+}
+
+.email-form {
+  margin-left: 8vw;
+  width: 66.66%;
+  margin-right: 20px;
+  border-radius: 4px;
+  position: relative;
+  padding: 10px 25px;
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Alegreya', serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-button {
+  margin-right: 8vw;
+  width: 33.33%;
+  position: relative;
+  border: 0;
+  padding: 10px 25px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+  border-radius: 15px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #B92227;
+}
+
+.newsletter-registration-wrapper {
+  background: url("../images/cityscape.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 600px;
+}
+
+// MEDIA QUERIES
+@media (max-width: 1200px) {
   .home-header {
     height: 280px;
   }
 
   .featured-product {
-    height: 320px;
+    height: 480px;
+  }
+  .newsletter-registration p {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-header {
+    height: 260px;
+  }
+
+  .featured-product {
+    height: 460px;
+  }
+  .newsletter-registration p {
+    width: 400px;
+    font-size: 16px;
+  }
+  .featured-product p {
+    font-size: 16px;
   }
 }
 
@@ -164,7 +245,14 @@
   }
 
   .featured-product {
-    height: 300px;
+    height: 440px;
+  }
+  .newsletter-registration p {
+    width: 300px;
+    font-size: 16px;
+  }
+  .featured-product p {
+    font-size: 16px;
   }
 }
 
@@ -175,7 +263,7 @@
     margin-bottom: 40px;
   }
   .home-item-image {
-    width: 90%;
+    width: 75%;
   }
   .home-items-row {
     display: block;
@@ -201,7 +289,7 @@
   }
 
   .featured-column1 p {
-    font-size: 14px;
+    font-size: 16px;
     width: 300px;
     padding: 0;
     margin: 0 auto;
@@ -219,10 +307,28 @@
   }
   .shop-now-btn-wrapper {
     text-align: center;
-    margin-bottom: 40px;
+  }
+  .newsletter-registration h2,
+  .featured-product h2 {
+    font-size: 48px;
+  }
+  .newsletter-registration h3,
+  .featured-product h3 {
+    font-size: 24px;
+  }
+  .newsletter-registration p {
+    width: 250px;
+    font-size: 16px;
+  }
+  .featured-column1 p {
+    font-size: 16px;
+  }
+  .newsletter-registration-column1 {
+    width: 33.33%;
   }
 }
 
+// MEDIA QUERY GUIDELINES
 // 320px.
 // 480px.
 // 600px.
