@@ -26,8 +26,7 @@ export default class Home extends Component {
         <ProductDetails
           showProductDetails={this.state.showProductDetails}
           handleClose={this.hideProductDetails}>
-          <p>Modal</p>
-          <p>Data</p>
+          <p>Modal Content</p>
         </ProductDetails>
         <div className="home-header">
           <h1 className="company-name">Mission Ceramics</h1>
