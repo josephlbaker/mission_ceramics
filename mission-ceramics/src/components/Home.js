@@ -1,13 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ReactDOM from "react-dom";
+import ProductDetails from './ProductDetails';
 import '../styles/Home.scss';
 import HomeItem from '../images/gallery-item.jpeg';
 import Cityscape from '../images/cityscape.png';
 import FeaturedImage from '../images/pngguru.com.png'
 
 export default class Home extends Component {
+
+  state = {
+    showProductDetails: false
+  }
+
+  showProductDetails = () => {
+    this.setState({ showProductDetails: true })
+  }
+
+  hideProductDetails = () => {
+    this.setState({ showProductDetails: false })
+  }
+
   render() {
     return (
       <div className="home-container">
+        <ProductDetails
+          showProductDetails={this.state.showProductDetails}
+          handleClose={this.hideProductDetails}>
+          <p>Modal</p>
+          <p>Data</p>
+        </ProductDetails>
         <div className="home-header">
           <h1 className="company-name">Mission Ceramics</h1>
           <svg className="logo" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,19 +49,19 @@ export default class Home extends Component {
         </div>
         <div className="home-items">
           <div className="home-items-row">
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
           </div>
           <div className="home-items-row">
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
           </div>
           <div className="home-items-row">
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
           </div>
         </div>
         <div className="newsletter-registration-wrapper">
@@ -63,3 +84,6 @@ export default class Home extends Component {
     )
   }
 }
+
+const productDetails = document.createElement("div");
+document.body.appendChild(productDetails);
