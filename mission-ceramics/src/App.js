@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import SideDrawer from './components/SideDrawer';
 import Backdrop from './components/Backdrop';
+import Cart from './components/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/App.scss';
 export default class extends Component {
@@ -39,6 +40,7 @@ export default class extends Component {
           {backdrop}
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/cart" component={Cart} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />

@@ -1,0 +1,42 @@
+.footer-container {
+  background-color: #B92227;
+  height: 320px;
+}
+
+.footer-content {
+  float: right;
+  color: #ffffff;
+}
+
+.footer-content h3,
+.footer-content p {
+  margin: 0;
+  margin-right: 16vw;
+}
+
+.footer-content h3 {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 28px;
+  width: 160px;
+}
+
+.footer-content p {
+  padding-bottom: 10px;
+}
+
+.copyright {
+  padding-top: 60px;
+}
+
+// MEDIA QUERIES
+@media (max-width: 768px) {
+  .footer-content {
+    float: left;
+  }
+  .footer-content h3,
+  .footer-content p {
+    margin: 0;
+    margin-left: 8vw;
+  }
+}

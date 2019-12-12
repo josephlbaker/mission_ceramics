@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import ProductDetails from './ProductDetails';
+import Footer from './Footer';
 import '../styles/Home.scss';
 import HomeItem from '../images/gallery-item.jpeg';
 import Cityscape from '../images/cityscape.png';
@@ -78,7 +79,7 @@ export default class Home extends Component {
             <button className="subscribe-button">SUBSCRIBE</button>
           </div>
         </div>
-        {/* <img src={Cityscape} alt="cityscape" className="cityscape-image" /> */}
+        <Footer />
       </div>
     )
   }
