@@ -10,40 +10,14 @@ import FeaturedImage from '../images/pngguru.com.png'
 export default class Home extends Component {
 
   state = {
-    showProductDetails: false,
-    itemNames: [],
-    itemImages: []
+    showProductDetails: false
   }
 
-  componentWillMount() {
-    this.fetchItems();
-  }
-
-  fetchItems = () => {
-    fetch("http://localhost:8000/", {
-      method: 'GET'
+  showProductDetails = (item) => {
+    this.setState({
+      showProductDetails: true
     })
-      .then(res => res.json())
-      .then(res => {
-        for (let i = 0; i < res.objects.length; i++) {
-          if (res.objects[i].type === 'ITEM') {
-            let joined = this.state.itemNames.concat(res.objects[i].item_data.name);
-            this.setState({
-              itemNames: joined
-            })
-          }
-          if (res.objects[i].type === 'IMAGE') {
-            let joined = this.state.itemImages.concat(res.objects[i].image_data.url);
-            this.setState({
-              itemImages: joined
-            })
-          }
-        }
-      })
-  };
-
-  showProductDetails = () => {
-    this.setState({ showProductDetails: true })
+    this.props.setItem(item);
   }
 
   hideProductDetails = () => {
@@ -51,11 +25,11 @@ export default class Home extends Component {
   }
 
   render() {
-    // let itemNames = this.state.itemNames.map((i) => {
+    // let itemNames = this.props.itemNames.map((i) => {
     //   return <li key={i}>{i}</li>
     // })
-    let itemImages = this.state.itemImages.map((i) => {
-      return <div className="home-items-column"><img key={i} src={i} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
+    let itemImages = this.props.items.map((i) => {
+      return <div key={i.name} className="home-items-column"><img src={i.image} alt="home-item" className="home-item-image" onClick={() => this.showProductDetails(i)} /></div>
     })
 
     return (

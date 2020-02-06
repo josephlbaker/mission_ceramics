@@ -12,8 +12,42 @@ import './styles/App.scss';
 export default class extends Component {
 
   state = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
+    items: [],
+    currentItem: null
   }
+
+  componentWillMount() {
+    this.fetchItems();
+  }
+
+  setItem = (item) => {
+    this.setState({
+      currentItem: item
+    })
+  }
+
+  fetchItems = () => {
+    fetch("http://localhost:8000/", {
+      method: 'GET'
+    })
+      .then(res => res.json())
+      .then(res => {
+        for (let i = 0; i < res.objects.length; i++) {
+          if (res.objects[i].type === 'ITEM') {
+            let item = {};
+            item['name'] = res.objects[i].item_data.name;
+            if (res.objects[i + 1].type === 'IMAGE') {
+              item['image'] = res.objects[i + 1].image_data.url;
+            }
+            let joined = this.state.items.concat(item);
+            this.setState({
+              items: joined
+            })
+          }
+        }
+      })
+  };
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
@@ -39,7 +73,11 @@ export default class extends Component {
           <SideDrawer show={this.state.sideDrawerOpen} />
           {backdrop}
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={() =>
+              <Home
+                items={this.state.items}
+                setItem={this.setItem}
+              />} />
             <Route path="/cart" component={Cart} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
