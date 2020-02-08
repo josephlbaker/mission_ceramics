@@ -24,10 +24,10 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <ProductDetails
+          currentItem={this.props.currentItem}
           showProductDetails={this.props.showProductDetails}
-          handleClose={this.props.hideProductDetails}>
-          {/* <p>Modal Content</p> */}
-        </ProductDetails>
+          handleClose={this.props.hideProductDetails}
+        />
         <div className="home-header">
           <h1 className="company-name">Mission Ceramics</h1>
           <svg className="logo" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">

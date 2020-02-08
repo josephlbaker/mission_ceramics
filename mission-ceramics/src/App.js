@@ -93,6 +93,7 @@ export default class extends Component {
           <Switch>
             <Route path="/" exact component={() =>
               <Home
+                currentItem={this.state.currentItem}
                 showProductDetails={this.state.showProductDetails}
                 hideProductDetails={this.hideProductDetails}
                 currentItem={this.state.currentItem}
