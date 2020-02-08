@@ -9,19 +9,8 @@ import FeaturedImage from '../images/pngguru.com.png'
 
 export default class Home extends Component {
 
-  state = {
-    showProductDetails: false
-  }
-
   showProductDetails = (item) => {
-    this.setState({
-      showProductDetails: true
-    })
     this.props.setItem(item);
-  }
-
-  hideProductDetails = () => {
-    this.setState({ showProductDetails: false })
   }
 
   render() {
@@ -35,8 +24,8 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <ProductDetails
-          showProductDetails={this.state.showProductDetails}
-          handleClose={this.hideProductDetails}>
+          showProductDetails={this.props.showProductDetails}
+          handleClose={this.props.hideProductDetails}>
           {/* <p>Modal Content</p> */}
         </ProductDetails>
         <div className="home-header">
@@ -61,7 +50,7 @@ export default class Home extends Component {
           <div className="home-items-row">
             {itemImages}
           </div>
-          <div className="home-items-row">
+          {/* <div className="home-items-row">
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
@@ -70,7 +59,7 @@ export default class Home extends Component {
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
-          </div>
+          </div> */}
         </div>
         <div className="newsletter-registration-wrapper">
           <div className="newsletter-registration">

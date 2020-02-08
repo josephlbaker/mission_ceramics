@@ -14,7 +14,8 @@ export default class extends Component {
   state = {
     sideDrawerOpen: false,
     items: [],
-    currentItem: null
+    currentItem: null,
+    showProductDetails: false
   }
 
   componentWillMount() {
@@ -23,8 +24,25 @@ export default class extends Component {
 
   setItem = (item) => {
     this.setState({
-      currentItem: item
+      currentItem: item,
+      showProductDetails: true
     })
+  }
+
+  hideProductDetails = (e) => {
+    if (e.target.matches('.product-details-main') ||
+      e.target.matches('.product-details-image') ||
+      e.target.matches('.product-details-text') ||
+      e.target.matches('.product-name') ||
+      e.target.matches('.product-price') ||
+      e.target.matches('.product-description') ||
+      e.target.matches('.add-to-cart-btn-wrapper') ||
+      e.target.matches('.add-to-cart-btn')
+    ) {
+      return false;
+    } else {
+      this.setState({ showProductDetails: false })
+    }
   }
 
   fetchItems = () => {
@@ -75,6 +93,9 @@ export default class extends Component {
           <Switch>
             <Route path="/" exact component={() =>
               <Home
+                showProductDetails={this.state.showProductDetails}
+                hideProductDetails={this.hideProductDetails}
+                currentItem={this.state.currentItem}
                 items={this.state.items}
                 setItem={this.setItem}
               />} />
