@@ -9,26 +9,26 @@ import FeaturedImage from '../images/pngguru.com.png'
 
 export default class Home extends Component {
 
-  state = {
-    showProductDetails: false
-  }
-
-  showProductDetails = () => {
-    this.setState({ showProductDetails: true })
-  }
-
-  hideProductDetails = () => {
-    this.setState({ showProductDetails: false })
+  showProductDetails = (item) => {
+    this.props.setItem(item);
   }
 
   render() {
+    // let itemNames = this.props.itemNames.map((i) => {
+    //   return <li key={i}>{i}</li>
+    // })
+    let itemImages = this.props.items.map((i) => {
+      return <div key={i.name} className="home-items-column"><img src={i.image} alt="home-item" className="home-item-image" onClick={() => this.showProductDetails(i)} /></div>
+    })
+
     return (
       <div className="home-container">
         <ProductDetails
-          showProductDetails={this.state.showProductDetails}
-          handleClose={this.hideProductDetails}>
-          {/* <p>Modal Content</p> */}
-        </ProductDetails>
+          addToCart={this.props.addToCart}
+          currentItem={this.props.currentItem}
+          showProductDetails={this.props.showProductDetails}
+          handleClose={this.props.hideProductDetails}
+        />
         <div className="home-header">
           <h1 className="company-name">Mission Ceramics</h1>
           <svg className="logo" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,6 +49,9 @@ export default class Home extends Component {
         </div>
         <div className="home-items">
           <div className="home-items-row">
+            {itemImages}
+          </div>
+          {/* <div className="home-items-row">
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
@@ -57,12 +60,7 @@ export default class Home extends Component {
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
             <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
-          </div>
-          <div className="home-items-row">
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
-            <div className="home-items-column"><img src={HomeItem} alt="home-item" className="home-item-image" onClick={this.showProductDetails} /></div>
-          </div>
+          </div> */}
         </div>
         <div className="newsletter-registration-wrapper">
           <div className="newsletter-registration">
