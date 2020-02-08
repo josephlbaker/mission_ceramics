@@ -24,6 +24,7 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <ProductDetails
+          addToCart={this.props.addToCart}
           currentItem={this.props.currentItem}
           showProductDetails={this.props.showProductDetails}
           handleClose={this.props.hideProductDetails}

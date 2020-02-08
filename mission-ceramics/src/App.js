@@ -15,11 +15,17 @@ export default class extends Component {
     sideDrawerOpen: false,
     items: [],
     currentItem: null,
-    showProductDetails: false
+    showProductDetails: false,
+    cart: []
   }
 
   componentWillMount() {
     this.fetchItems();
+  }
+
+  addToCart = () => {
+    let joined = this.state.cart.concat(this.state.currentItem);
+    this.setState({ cart: joined });
   }
 
   setItem = (item) => {
@@ -96,14 +102,20 @@ export default class extends Component {
           <Switch>
             <Route path="/" exact component={() =>
               <Home
+                addToCart={this.addToCart}
                 currentItem={this.state.currentItem}
                 showProductDetails={this.state.showProductDetails}
                 hideProductDetails={this.hideProductDetails}
                 currentItem={this.state.currentItem}
                 items={this.state.items}
                 setItem={this.setItem}
-              />} />
-            <Route path="/cart" component={Cart} />
+              />}
+            />
+            <Route path="/cart" component={() =>
+              <Cart
+                cart={this.state.cart}
+              />}
+            />
             <Route path="/gallery" component={Gallery} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
