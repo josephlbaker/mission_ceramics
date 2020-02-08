@@ -55,6 +55,9 @@ export default class extends Component {
           if (res.objects[i].type === 'ITEM') {
             let item = {};
             item['name'] = res.objects[i].item_data.name;
+            item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });;
+            item['description'] = res.objects[i].item_data.description;
+
             if (res.objects[i + 1].type === 'IMAGE') {
               item['image'] = res.objects[i + 1].image_data.url;
             }
