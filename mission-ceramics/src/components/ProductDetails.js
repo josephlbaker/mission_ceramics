@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/ProductDetails.scss';
-import HomeItem from '../images/gallery-item.jpeg';
 import 'font-awesome/css/font-awesome.min.css';
 
 const ProductDetails = ({ addToCart, currentItem, handleClose, showProductDetails, children }) => {

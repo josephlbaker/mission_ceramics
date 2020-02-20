@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import Nav from './components/Nav';
-import Home from './components/Home';
-import Gallery from './components/Gallery';
-import About from './components/About';
-import Contact from './components/Contact';
-import SideDrawer from './components/SideDrawer';
-import Backdrop from './components/Backdrop';
-import Cart from './components/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/App.scss';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Cart from './components/Cart';
+
+
 export default class extends Component {
 
   state = {
-    sideDrawerOpen: false,
     items: [],
     currentItem: null,
     showProductDetails: false,
@@ -76,29 +72,11 @@ export default class extends Component {
       })
   };
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    })
-  };
-
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  }
-
   render() {
-    let backdrop;
-
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
-
     return (
       <Router>
         <div className="row">
-          <Nav drawerClickHandler={this.drawerToggleClickHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen} />
-          {backdrop}
+          <Nav />
           <Switch>
             <Route path="/" exact component={() =>
               <Home
@@ -106,7 +84,6 @@ export default class extends Component {
                 currentItem={this.state.currentItem}
                 showProductDetails={this.state.showProductDetails}
                 hideProductDetails={this.hideProductDetails}
-                currentItem={this.state.currentItem}
                 items={this.state.items}
                 setItem={this.setItem}
               />}
@@ -116,9 +93,6 @@ export default class extends Component {
                 cart={this.state.cart}
               />}
             />
-            <Route path="/gallery" component={Gallery} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
           </Switch>
         </div>
       </Router>
