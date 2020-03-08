@@ -20,9 +20,20 @@ export default class extends Component {
   }
 
   addToCart = () => {
-    let joined = this.state.cart.concat(this.state.currentItem);
-    this.setState({ cart: joined });
+    let items = [];
+
+    if (localStorage.getItem('items')) {
+      items = JSON.parse(localStorage.getItem('items'));
+    }
+    items.push(this.state.currentItem);
+    localStorage.setItem('items', JSON.stringify(items));
   }
+
+  // removeFromCart = (productId) => {
+  //   let storageItems = JSON.parse(localStorage.getItem('items'));
+  //   let items = storageItems.filter(product => product.productId !== productId );
+  //   localStorage.setItem('items', JSON.stringify(items));
+  // }
 
   setItem = (item) => {
     this.setState({
@@ -59,6 +70,8 @@ export default class extends Component {
             item['name'] = res.objects[i].item_data.name;
             item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });;
             item['description'] = res.objects[i].item_data.description;
+            item['id'] = res.objects[i].id;
+            item['quantity'] = 1;
 
             if (res.objects[i + 1].type === 'IMAGE') {
               item['image'] = res.objects[i + 1].image_data.url;

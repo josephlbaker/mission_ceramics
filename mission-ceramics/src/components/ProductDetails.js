@@ -16,7 +16,7 @@ const ProductDetails = ({ addToCart, currentItem, handleClose, showProductDetail
             <h3 className="product-name">{currentItem.name}</h3>
             <p className="product-price">{currentItem.price}</p>
             <p className="product-description">{currentItem.description}</p>
-            <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart}>ADD TO CART</button></div>
+            <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart()}>ADD TO CART</button></div>
           </div>
           <i className="fa fa-times" aria-hidden="true" onClick={handleClose}></i>
         </section>
