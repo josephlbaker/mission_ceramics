@@ -26,6 +26,8 @@ export default class Home extends Component {
           currentItem={this.props.currentItem}
           showProductDetails={this.props.showProductDetails}
           handleClose={this.props.hideProductDetails}
+          setQuantity={this.props.setQuantity}
+          quantity={this.props.quantity}
         />
         <div className="home-header">
           <h1 className="company-name">Mission Ceramics</h1>
