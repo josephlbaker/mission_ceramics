@@ -17,7 +17,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
             <p className="product-price">{currentItem.price}</p>
             <p className="product-description">{currentItem.description}</p>
             <label for="quantity">Quantity
-                <select value={quantity} id="quantity" onChange={setQuantity} class="quantity-input">
+              <select value={quantity} id="quantity" onChange={setQuantity} class="quantity-input">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

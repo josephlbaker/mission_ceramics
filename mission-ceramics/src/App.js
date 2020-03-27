@@ -4,6 +4,7 @@ import './styles/App.scss';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Cart from './components/Cart';
+import update from 'immutability-helper';
 
 
 export default class extends Component {
@@ -27,13 +28,28 @@ export default class extends Component {
     })
   }
 
+  updateQuantity = (itemName) => (e) => {
+    for (let i = 0; i < this.state.cart.length; i++) {
+      if (this.state.cart[i].name === itemName) {
+        this.state.cart[i].quantity = e.target.value;
+        this.setState({
+          cart: update(this.state.cart, { [i]: { quantity: { $set: e.target.value } } })
+        })
+      }
+    }
+  }
+
   addToCart = () => {
     if (this.state.cart.includes(this.state.currentItem)) {
       console.log('This item in cart already');
     } else {
       this.state.currentItem.quantity = this.state.quantity;
       let joined = this.state.cart.concat(this.state.currentItem);
-      this.setState({ cart: joined });
+      this.setState({
+        cart: joined,
+        quantity: "1",
+        showProductDetails: false
+      });
     }
   }
 
@@ -107,6 +123,7 @@ export default class extends Component {
             />
             <Route path="/cart" component={() =>
               <Cart
+                updateQuantity={this.updateQuantity}
                 cart={this.state.cart}
               />}
             />

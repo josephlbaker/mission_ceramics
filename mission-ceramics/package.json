@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "immutability-helper": "^3.0.1",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
