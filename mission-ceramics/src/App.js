@@ -5,9 +5,9 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Cart from './components/Cart';
 import update from 'immutability-helper';
+import { withAlert } from 'react-alert'
 
-
-export default class extends Component {
+class App extends React.Component {
 
   state = {
     items: [],
@@ -40,8 +40,12 @@ export default class extends Component {
   }
 
   addToCart = () => {
+    const alert = this.props.alert;
     if (this.state.cart.includes(this.state.currentItem)) {
-      console.log('This item in cart already');
+      this.setState({
+        showProductDetails: false
+      })
+      alert.show('This item is already in your cart');
     } else {
       this.state.currentItem.quantity = this.state.quantity;
       let joined = this.state.cart.concat(this.state.currentItem);
@@ -50,6 +54,7 @@ export default class extends Component {
         quantity: "1",
         showProductDetails: false
       });
+      alert.show('Added to cart!')
     }
   }
 
@@ -133,3 +138,5 @@ export default class extends Component {
     )
   }
 }
+
+export default withAlert()(App)
