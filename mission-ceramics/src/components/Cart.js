@@ -3,6 +3,11 @@ import '../styles/Cart.scss';
 
 export default class Cart extends Component {
   render() {
+    let cartPrice = 0;
+    for (let i = 0; i < this.props.cart.length; i++) {
+      cartPrice += (Number(this.props.cart[i].price.replace(/[^0-9.-]+/g, "")) * parseInt(this.props.cart[i].quantity));
+    }
+
     let cartItems = this.props.cart.map((i) => {
       return (
         <div key={i.name}>
@@ -23,6 +28,7 @@ export default class Cart extends Component {
     return (
       <div className="cart-container">
         {cartItems}
+        {cartPrice}
       </div>
     )
   }
