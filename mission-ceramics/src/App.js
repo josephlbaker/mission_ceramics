@@ -14,7 +14,8 @@ class App extends React.Component {
     currentItem: null,
     showProductDetails: false,
     cart: [],
-    quantity: "1"
+    quantity: "1",
+    itemsInCart: 0
   }
 
   componentWillMount() {
@@ -29,6 +30,8 @@ class App extends React.Component {
   }
 
   updateQuantity = (itemName) => (e) => {
+    let count = 0;
+
     for (let i = 0; i < this.state.cart.length; i++) {
       if (this.state.cart[i].name === itemName) {
         this.state.cart[i].quantity = e.target.value;
@@ -36,11 +39,16 @@ class App extends React.Component {
           cart: update(this.state.cart, { [i]: { quantity: { $set: e.target.value } } })
         })
       }
+      count += parseInt(this.state.cart[i].quantity);
+      this.setState({
+        itemsInCart: count
+      })
     }
   }
 
   addToCart = () => {
     const alert = this.props.alert;
+
     if (this.state.cart.includes(this.state.currentItem)) {
       this.setState({
         showProductDetails: false
@@ -48,12 +56,17 @@ class App extends React.Component {
       alert.show('This item is already in your cart');
     } else {
       this.state.currentItem.quantity = this.state.quantity;
+
       let joined = this.state.cart.concat(this.state.currentItem);
+      let count = this.state.itemsInCart + parseInt(this.state.quantity);
+
       this.setState({
         cart: joined,
         quantity: "1",
-        showProductDetails: false
+        showProductDetails: false,
+        itemsInCart: count
       });
+
       alert.show('Added to cart!')
     }
   }
@@ -112,7 +125,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="row">
-          <Nav />
+          <Nav itemsInCart={this.state.itemsInCart} />
           <Switch>
             <Route path="/" exact component={() =>
               <Home
