@@ -37,7 +37,9 @@ class PaymentPage extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        nonce: nonce
+        nonce: nonce,
+        amount: this.props.totalPrice,
+        cartItems: this.props.cart
       })
     })
       .catch(err => {

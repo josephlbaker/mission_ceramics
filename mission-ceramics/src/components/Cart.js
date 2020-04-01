@@ -4,12 +4,22 @@ import PaymentPage from './PaymentPage';
 
 export default class Cart extends Component {
 
-  render() {
+  state = {
+    totalPrice: 0
+  }
 
-    let cartPrice = 0;
+  componentWillMount() {
+    let totalPrice = 0;
     for (let i = 0; i < this.props.cart.length; i++) {
-      cartPrice += (Number(this.props.cart[i].price.replace(/[^0-9.-]+/g, "")) * parseInt(this.props.cart[i].quantity));
+      totalPrice += (Number(this.props.cart[i].price.replace(/[^0-9.-]+/g, "")) * parseInt(this.props.cart[i].quantity) * 100);
     }
+
+    this.setState({
+      totalPrice
+    });
+  }
+
+  render() {
 
     let cartItems = this.props.cart.map((i) => {
       return (
@@ -31,8 +41,11 @@ export default class Cart extends Component {
     return (
       <div className="cart-container">
         {cartItems}
-        {cartPrice}
-        <PaymentPage />
+        {this.state.totalPrice}
+        <PaymentPage
+          totalPrice={this.state.totalPrice}
+          cart={this.props.cart}
+        />
       </div>
     )
   }
