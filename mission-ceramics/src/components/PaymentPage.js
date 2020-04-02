@@ -39,7 +39,13 @@ class PaymentPage extends React.Component {
       body: JSON.stringify({
         nonce: nonce,
         amount: this.props.totalPrice,
-        cartItems: this.props.cart
+        customer_id: "John Smith",
+        location_id: "123 Fake Street, San Francisco CA 12345",
+        note: `
+        CART ITEMS: ${JSON.stringify(this.props.cart)}
+        NAME: John Smith,
+        EMAIL: test@test.com,
+        ADDRESS: 123 Fake Street, San Francisco CA 12345`
       })
     })
       .catch(err => {
