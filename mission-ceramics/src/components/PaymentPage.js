@@ -20,6 +20,18 @@ class PaymentPage extends React.Component {
   }
 
   cardNonceResponseReceived = (errors, nonce, cardData, buyerVerificationToken) => {
+    // ///////////////////////
+    // paymentForm.verifyBuyer(
+    //   nonce,
+    //   verificationDetails,
+    //   function (err, verificationResult) {
+    //     if (err == null) {
+    //       //TODO: Move existing Fetch API call here
+    //     }
+    //   });
+    // //////////////////////
+
+
     let data = { nonce: nonce, token: buyerVerificationToken }
 
     if (errors) {
@@ -38,9 +50,8 @@ class PaymentPage extends React.Component {
       },
       body: JSON.stringify({
         nonce: nonce,
+        token: buyerVerificationToken,
         amount: this.props.totalPrice,
-        customer_id: "John Smith",
-        location_id: "123 Fake Street, San Francisco CA 12345",
         note: `
         CART ITEMS: ${JSON.stringify(this.props.cart)}
         NAME: John Smith,
