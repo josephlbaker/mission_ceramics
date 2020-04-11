@@ -107,6 +107,7 @@ class App extends React.Component {
             item['name'] = res.objects[i].item_data.name;
             item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });;
             item['description'] = res.objects[i].item_data.description;
+            item['id'] = res.objects[i].id
             // item['quantity'] = this.state.quantity;
 
             if (res.objects[i + 1].type === 'IMAGE') {

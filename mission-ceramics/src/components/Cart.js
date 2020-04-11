@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import '../styles/Cart.scss';
 import PaymentPage from './PaymentPage';
+import CustomerForm from './CustomerForm';
 
 export default class Cart extends Component {
 
   state = {
-    totalPrice: 0
+    totalPrice: 0,
+    renderCheckout: false
   }
 
   componentWillMount() {
@@ -17,6 +19,18 @@ export default class Cart extends Component {
     this.setState({
       totalPrice
     });
+  }
+
+  renderCustomerForm = () => {
+    this.setState({
+      renderCheckout: true
+    })
+  }
+
+  renderCart = () => {
+    this.setState({
+      renderCheckout: false
+    })
   }
 
   render() {
@@ -38,15 +52,21 @@ export default class Cart extends Component {
       )
     })
 
-    return (
-      <div className="cart-container">
-        {cartItems}
-        {this.state.totalPrice}
-        <PaymentPage
-          totalPrice={this.state.totalPrice}
+    if (!this.state.renderCheckout) {
+      return (
+        <div className="cart-container">
+          {cartItems}
+          {this.state.totalPrice}
+          <button onClick={this.renderCustomerForm}>Proceed to Checkout</button>
+        </div>
+      )
+    } else {
+      return (
+        <CustomerForm
           cart={this.props.cart}
+          renderCart={this.renderCart}
         />
-      </div>
-    )
+      )
+    }
   }
 }
