@@ -20,17 +20,6 @@ class PaymentPage extends React.Component {
   }
 
   cardNonceResponseReceived = (errors, nonce, cardData, buyerVerificationToken) => {
-    // ///////////////////////
-    // paymentForm.verifyBuyer(
-    //   nonce,
-    //   verificationDetails,
-    //   function (err, verificationResult) {
-    //     if (err == null) {
-    //       //TODO: Move existing Fetch API call here
-    //     }
-    //   });
-    // //////////////////////
-
 
     let data = { nonce: nonce, token: buyerVerificationToken }
 
@@ -52,11 +41,7 @@ class PaymentPage extends React.Component {
         nonce: nonce,
         token: buyerVerificationToken,
         amount: this.props.totalPrice,
-        note: `
-        CART ITEMS: ${JSON.stringify(this.props.cart)}
-        NAME: John Smith,
-        EMAIL: test@test.com,
-        ADDRESS: 123 Fake Street, San Francisco CA 12345`
+        orderId: this.props.orderId
       })
     })
       .catch(err => {
@@ -78,29 +63,9 @@ class PaymentPage extends React.Component {
       });
   }
 
-  createVerificationDetails() {
-    return {
-      amount: '100.00',
-      currencyCode: "USD",
-      intent: "CHARGE",
-      billingContact: {
-        familyName: "Smith",
-        givenName: "John",
-        email: "jsmith@example.com",
-        country: "GB",
-        city: "London",
-        addressLines: ["1235 Emperor's Gate"],
-        postalCode: "SW7 4JA",
-        phone: "020 7946 0532"
-      }
-    }
-  }
-
   render() {
     return (
       <div>
-        <h1>Payment Page</h1>
-
         <SquarePaymentForm
           sandbox={true}
           applicationId={process.env.REACT_APP_APPLICATION_ID}

@@ -63,6 +63,7 @@ export default class Cart extends Component {
     } else {
       return (
         <CustomerForm
+          totalPrice={this.state.totalPrice}
           cart={this.props.cart}
           renderCart={this.renderCart}
         />

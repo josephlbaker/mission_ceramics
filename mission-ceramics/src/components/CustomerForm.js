@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Payment from './Payment';
+import PaymentPage from './PaymentPage';
 import '../styles/Checkout.scss';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class CustomerForm extends Component {
 
@@ -13,6 +14,7 @@ export default class CustomerForm extends Component {
     state: null,
     zip: null,
     custId: null,
+    orderId: null,
     renderPaymentPage: false
   }
 
@@ -51,9 +53,39 @@ export default class CustomerForm extends Component {
           this.setState({
             custId: res.data.customer.id
           })
+          this.createLineItems();
         })
       })
-    // this.renderPaymentPage();
+  }
+
+  createOrder = (line_items) => {
+    fetch('http://localhost:8000/orders', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        order: {
+          line_items: line_items,
+          customer_id: this.state.custId
+        },
+        idempotency_key: uuidv4(),
+      })
+    })
+      .then(response => {
+        response.json().then(data => ({
+          data: data,
+          status: response.status
+        })
+        ).then(res => {
+          console.log(res.status, res.data);
+          this.setState({
+            orderId: res.data.order.id
+          })
+        })
+      })
+    this.renderPaymentPage();
   }
 
   renderPaymentPage = () => {
@@ -66,6 +98,21 @@ export default class CustomerForm extends Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+  }
+
+  createLineItems = () => {
+    let line_items = [];
+    for (let i = 0; i < this.props.cart.length; i++) {
+      let line_item = {};
+      line_item.name = this.props.cart[i].name;
+      line_item.quantity = this.props.cart[i].quantity;
+      line_item.base_price_money = {
+        amount: parseInt(this.props.cart[i].price.replace(/[$.,]+/g, '')),
+        currency: "USD"
+      }
+      line_items.push(line_item);
+    }
+    this.createOrder(line_items);
   }
 
   render() {
@@ -87,7 +134,10 @@ export default class CustomerForm extends Component {
       )
     } else {
       return (
-        <Payment />
+        <PaymentPage
+          totalPrice={this.props.totalPrice}
+          orderId={this.state.orderId}
+        />
       )
     }
   }
