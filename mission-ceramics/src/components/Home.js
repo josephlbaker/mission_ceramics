@@ -12,9 +12,6 @@ export default class Home extends Component {
   }
 
   render() {
-    // let itemNames = this.props.itemNames.map((i) => {
-    //   return <li key={i}>{i}</li>
-    // })
     let itemImages = this.props.items.map((i) => {
       return <div key={i.name} className="home-items-column"><img src={i.image} alt="home-item" className="home-item-image" onClick={() => this.showProductDetails(i)} /></div>
     })

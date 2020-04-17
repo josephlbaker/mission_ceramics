@@ -53,13 +53,21 @@ export default class Cart extends Component {
     })
 
     if (!this.state.renderCheckout) {
-      return (
-        <div className="cart-container">
-          {cartItems}
-          {this.state.totalPrice}
-          <button onClick={this.renderCustomerForm}>Proceed to Checkout</button>
-        </div>
-      )
+      if (this.props.cart.length > 0) {
+        return (
+          <div className="cart-container">
+            {cartItems}
+            {this.state.totalPrice}
+            <button onClick={this.renderCustomerForm}>Proceed to Checkout</button>
+          </div>
+        )
+      } else {
+        return (
+          <div className="cart-empty">
+            <h3>Your cart is empty</h3>
+          </div>
+        )
+      }
     } else {
       return (
         <CustomerForm
