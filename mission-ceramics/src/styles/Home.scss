@@ -120,7 +120,10 @@
 }
 
 .home-item-image {
-  width: 70%;
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  // width: 70%;
   margin: 0 auto;
   opacity: 1;
   transition: opacity .25s ease-in-out;

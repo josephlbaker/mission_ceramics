@@ -110,9 +110,14 @@ class App extends React.Component {
             item['id'] = res.objects[i].id
             // item['quantity'] = this.state.quantity;
 
-            if (res.objects[i + 1].type === 'IMAGE') {
-              item['image'] = res.objects[i + 1].image_data.url;
+            for (let j = 0; j < res.objects.length; j++) {
+              if (res.objects[i].image_id === res.objects[j].id) {
+                item['image'] = res.objects[j].image_data.url;
+              }
             }
+            // if (res.objects[i + 1].type === 'IMAGE') {
+            //   item['image'] = res.objects[i + 1].image_data.url;
+            // }
             let joined = this.state.items.concat(item);
             this.setState({
               items: joined
