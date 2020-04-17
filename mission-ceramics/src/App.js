@@ -108,16 +108,12 @@ class App extends React.Component {
             item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });;
             item['description'] = res.objects[i].item_data.description;
             item['id'] = res.objects[i].id
-            // item['quantity'] = this.state.quantity;
 
             for (let j = 0; j < res.objects.length; j++) {
               if (res.objects[i].image_id === res.objects[j].id) {
                 item['image'] = res.objects[j].image_data.url;
               }
             }
-            // if (res.objects[i + 1].type === 'IMAGE') {
-            //   item['image'] = res.objects[i + 1].image_data.url;
-            // }
             let joined = this.state.items.concat(item);
             this.setState({
               items: joined
