@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/Cart.scss';
 import { v4 as uuidv4 } from 'uuid';
 
-
 export default class Cart extends Component {
 
   state = {
@@ -20,18 +19,6 @@ export default class Cart extends Component {
       totalPrice
     });
   }
-
-  // renderCustomerForm = () => {
-  //   this.setState({
-  //     renderCheckout: true
-  //   })
-  // }
-
-  // renderCart = () => {
-  //   this.setState({
-  //     renderCheckout: false
-  //   })
-  // }
 
   createLineItems = () => {
     let line_items = [];
@@ -108,17 +95,27 @@ export default class Cart extends Component {
 
     let cartItems = this.props.cart.map((i) => {
       return (
-        <div key={i.name}>
-          {i.name} : {i.quantity}
-          <label for="quantity">Quantity
-            <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" class="quantity-input">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label>
+        <div className="item" key={i.name}>
+          <img className="item-image" src={i.image} alt="home-item" />
+          <div className="name-qty-wrapper">
+            <div className="item-name">
+              {i.name}
+            </div>
+            <div className="item-qty">
+              <label for="quantity">Qty:
+                <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" class="quantity-input">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </label>
+            </div>
+            <div className="item-price">
+              {parseInt((i.price.replace(/[$.,]+/g, '')) * parseInt(i.quantity) / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}
+            </div>
+          </div>
         </div>
       )
     })
@@ -126,9 +123,13 @@ export default class Cart extends Component {
     if (this.props.cart.length > 0) {
       return (
         <div className="cart-container">
-          {cartItems}
-          {this.state.totalPrice}
-          <button onClick={this.createLineItems}>Proceed to Checkout</button>
+          <div className="items-wrapper">
+            {cartItems}
+          </div>
+          <div className="submit-wrapper">
+            <p className="subtotal-text">Subtotal</p><p className="subtotal-num">{(this.state.totalPrice / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
+            <button className="checkout-btn" onClick={this.createLineItems}>CHECKOUT</button>
+          </div>
         </div>
       )
     } else {

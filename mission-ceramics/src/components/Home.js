@@ -50,21 +50,6 @@ export default class Home extends Component {
             {itemImages[3]}{itemImages[4]}{itemImages[5]}
           </div> */}
         </div>
-        <div className="newsletter-registration-wrapper">
-          <div className="newsletter-registration">
-            <div className="newsletter-registration-column1">
-              <h3>JOIN NOW!</h3>
-              <h2>Newsletter</h2>
-            </div>
-            <div className="newsletter-registration-column2">
-              <p>Stay up to date with Mission Ceramics. Get early access to open studios, exhibitions, and new releases.</p>
-            </div>
-          </div>
-          <div className="newsletter-registration-inputs">
-            <input type="text" className="email-form" placeholder="EMAIL"></input>
-            <button className="subscribe-button">SUBSCRIBE</button>
-          </div>
-        </div>
         <Footer />
       </div>
     )

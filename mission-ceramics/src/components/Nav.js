@@ -9,7 +9,7 @@ export default class Nav extends Component {
   };
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
       const isTop = window.scrollY < 1;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop })

@@ -1,7 +1,88 @@
 .cart-container {
-  padding-top: 100px;
+  width: 100%;
 }
 
 .cart-empty {
   margin-top: 100px;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
+  object-fit:cover;
+}
+
+.items-wrapper {
+  width: 60%;
+  float: left;
+  margin-left: 40px;
+  margin-top: 120px;
+}
+
+.submit-wrapper {
+  margin-top: 120px;
+  width: 30%;
+  float: right;
+  display: flex;
+}
+
+.subtotal-text {
+  position: absolute;
+  margin-left: 0px;
+}
+
+.subtotal-num {
+  position: absolute;
+  margin-right: 0;
+  margin-left: 200px;
+}
+
+.checkout-btn {
+  width: 240px;
+  position: absolute;
+  margin-top: 40px;
+  border: 0;
+  padding: 10px 25px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+  border-radius: 15px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #B92227;
+}
+
+// .subtotal-text, .subtotal-num {
+//   position: absolute
+// }
+
+.item-name, .item-qty {
+  position: absolute
+}
+
+.item-name {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.item-qty {
+  margin-top: 65px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.item-price {
+  margin-top: 65px;
+  margin-left: 300px;
+  font-size: 12px;
+}
+
+.item-qty-wrapper {
+  position: relative;
 }

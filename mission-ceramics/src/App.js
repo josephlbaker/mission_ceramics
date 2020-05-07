@@ -105,7 +105,7 @@ class App extends React.Component {
           if (res.objects[i].type === 'ITEM') {
             let item = {};
             item['name'] = res.objects[i].item_data.name;
-            item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });;
+            item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });
             item['description'] = res.objects[i].item_data.description;
             item['id'] = res.objects[i].id
 
