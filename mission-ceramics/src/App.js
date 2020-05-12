@@ -29,6 +29,18 @@ class App extends React.Component {
     })
   }
 
+  removeItem = (item) => {
+    for (let i = 0; i < this.state.cart.length; i++) {
+      if (this.state.cart[i].name === item.name) {
+        let count = this.state.itemsInCart -= item.quantity;
+        this.setState({
+          cart: this.state.cart.filter(el => el.name !== item.name),
+          itemsInCart: count
+        })
+      }
+    }
+  }
+
   updateQuantity = (itemName) => (e) => {
     let count = 0;
 
@@ -143,6 +155,7 @@ class App extends React.Component {
             />
             <Route path="/cart" component={() =>
               <Cart
+                removeItem={this.removeItem}
                 updateQuantity={this.updateQuantity}
                 cart={this.state.cart}
               />}
