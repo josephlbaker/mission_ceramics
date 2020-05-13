@@ -117,6 +117,12 @@
 }
 
 @media (max-width: 768px) {
+  .product-name {
+    margin: 0 auto;
+  }
+  .product-price {
+    margin: 0 auto;
+  }
   .product-details-main {
     display: block;
     text-align: center;
@@ -126,10 +132,16 @@
     margin-top: 0;
   }
   .product-description {
-    margin: 10px;
+    // margin: 10px;
+    margin: 0 auto;
+  }
+  .quantity-input {
+    margin-top: 10px;
   }
   .product-details-image {
-    width: 50%;
+    width: 250px;
+    height: 250px;
+    display: cover;
   }
   .product-details-text h3 {
     margin-top: 0;
