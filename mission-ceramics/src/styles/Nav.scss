@@ -73,12 +73,36 @@
   padding-top: 5px;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 // .checkout-btn {
 //   display: inline-block;
 // }
 
 .toolbar__toggle-button {
   display: none;
+}
+
+span.step {
+  background: #B92227;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-left: 1px;
+  text-align: center;
+  font-size: 14px;
+  width: 1.6em;
+  vertical-align: top
 }
 
 // MEDIA QUERIES

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -13,5 +14,10 @@ code {
 }
 
 body, html {
-  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  overflow-x: initial;
 }
