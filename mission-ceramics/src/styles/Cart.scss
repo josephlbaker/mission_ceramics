@@ -7,7 +7,15 @@
 }
 
 .cart-empty {
+  font-family: 'Alegreya', serif;
+  margin: 0 auto;
   margin-top: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart-empty h3 {
+  font-weight: 400;
 }
 
 .item {
@@ -39,12 +47,14 @@
 
 .subtotal-text {
   margin-top: 0;
+  font-size: 18px;
 }
 
 .subtotal-num {
   margin-top: 0;
   margin-left: auto;
   margin-right: 0;
+  font-size: 18px;
 }
 
 .checkout-btn {
@@ -69,21 +79,21 @@
 }
 
 .item-name {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .item-qty {
   margin-top: 65px;
   margin-left: 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .item-price {
   margin-top: 65px;
   margin-left: 300px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .item-qty-wrapper {
@@ -132,6 +142,10 @@
 }
 
 @media (max-width: 600px) {
+  .item-name {
+    margin-top: 30px;
+    font-size: 18px;
+  }
   .cart-container {
     flex-direction: column;
   }
