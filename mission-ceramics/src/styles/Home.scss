@@ -56,8 +56,6 @@
   width: 300px;
   height: 300px;
   object-fit:cover;
-  // width: 70%;
-  // margin: 0 auto;
   opacity: 1;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
@@ -83,6 +81,7 @@
   width: 300px;
   text-align: left;
   margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 // CITYSCAPE
@@ -166,7 +165,7 @@
 // MEDIA QUERIES
 @media (max-width: 1200px) {
   .home-header {
-    height: 280px;
+    height: 500px;
   }
 
   .featured-product {
@@ -225,6 +224,10 @@
 }
 
 @media (max-width: 768px) {
+  .row1 {
+    margin-top: 100px;
+  }
+
   .home-items-column {
     float: none;
     width: 100vw;

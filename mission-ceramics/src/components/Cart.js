@@ -102,7 +102,7 @@ export default class Cart extends Component {
               {i.name}
             </div>
             <div className="item-qty">
-              <label for="quantity">Qty:
+              <label for="quantity"><p className="qty">Qty:</p>
                 <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" class="quantity-input">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -111,8 +111,8 @@ export default class Cart extends Component {
                   <option value="5">5</option>
                 </select>
               </label>
+              <button className="remove-button" onClick={() => this.props.removeItem(i)}>Remove</button>
             </div>
-            <button onClick={() => this.props.removeItem(i)}>Remove</button>
             <div className="item-price">
               {parseInt((i.price.replace(/[$.,]+/g, '')) * parseInt(i.quantity) / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}
             </div>
