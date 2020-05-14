@@ -6,11 +6,11 @@
 
 .footer-content {
   float: right;
-  color: #ffffff;
 }
 
 .footer-content h3,
-.footer-content p {
+.footer-content p,
+.footer-content a {
   margin: 0;
   margin-right: 16vw;
 }
@@ -20,14 +20,24 @@
   padding-bottom: 30px;
   font-size: 28px;
   width: 160px;
+  color: white;
 }
 
-.footer-content p {
+.footer-content p,
+.footer-content a {
   padding-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
 }
 
 .copyright {
   padding-top: 60px;
+}
+
+.social-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 // MEDIA QUERIES
