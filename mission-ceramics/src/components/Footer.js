@@ -7,8 +7,8 @@ export default class Footer extends Component {
       <div className="footer-container">
         <div className="footer-content">
           <h3>Mission Ceramics</h3>
-          <p>hello@missionceramics.com</p>
-          <p>@missionceramics</p>
+          <a href="mailto:hello@missionceramics.com" className="social-link">hello@missionceramics.com</a>
+          <a href="https://www.instagram.com/missionceramics/" className="social-link">@missionceramics</a>
           <p className="copyright">&copy; 2020 all rights reserved</p>
         </div>
       </div>
