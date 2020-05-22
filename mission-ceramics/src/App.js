@@ -108,7 +108,7 @@ class App extends React.Component {
   }
 
   fetchItems = () => {
-    fetch("167.172.127.78/api", {
+    fetch("test-app.missionceramics.com/api", {
       method: 'GET'
     })
       .then(res => res.json())
