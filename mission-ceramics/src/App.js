@@ -108,7 +108,7 @@ class App extends React.Component {
   }
 
   fetchItems = () => {
-    fetch("http://167.172.127.78/api", {
+    fetch("167.172.127.78/api", {
       method: 'GET'
     })
       .then(res => res.json())
