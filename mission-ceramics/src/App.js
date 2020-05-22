@@ -109,7 +109,13 @@ class App extends React.Component {
 
   fetchItems = () => {
     fetch("http://test-app.missionceramics.com/api", {
-      method: 'GET'
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Access-Control-Allow-Headers': "*"
+      }
     })
       .then(res => res.json())
       .then(res => {
