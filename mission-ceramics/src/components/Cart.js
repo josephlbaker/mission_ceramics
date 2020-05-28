@@ -37,7 +37,7 @@ export default class Cart extends Component {
   }
 
   createOrder = (line_items) => {
-    fetch('https://test-app.missionceramics.com/api/orders', {
+    fetch('https://test-app.missionceramics.com/orders', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -67,7 +67,7 @@ export default class Cart extends Component {
   }
 
   createCheckout = (order) => {
-    fetch('https://test-app.missionceramics.com/api/checkout', {
+    fetch('https://test-app.missionceramics.com/checkout', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
