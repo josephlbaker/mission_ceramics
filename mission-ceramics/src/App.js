@@ -108,7 +108,7 @@ class App extends React.Component {
   }
 
   fetchItems = () => {
-    fetch("https://test-app.missionceramics.com:8000", {
+    fetch("https://test-app.missionceramics.com/api", {
       method: 'GET'
     })
       .then(res => res.json())
