@@ -128,9 +128,11 @@ export default class Cart extends Component {
           <div className="items-wrapper">
             {cartItems}
           </div>
-          <div className="submit-wrapper">
-            <p className="subtotal-text">Subtotal</p><p className="subtotal-num">{(this.state.totalPrice / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
-            <button className="checkout-btn" onClick={this.createLineItems}>CHECKOUT</button>
+          <div className="div-wrapper">
+            <div className="submit-wrapper">
+              <p className="subtotal-text">Subtotal</p><p className="subtotal-num">{(this.state.totalPrice / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
+              <button className="checkout-btn" onClick={this.createLineItems}>CHECKOUT</button>
+            </div>
           </div>
         </div>
       )
