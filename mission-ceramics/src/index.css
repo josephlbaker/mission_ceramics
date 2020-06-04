@@ -20,4 +20,5 @@ body, html {
 
 html {
   overflow-x: initial;
+  /* width: 100%; */
 }

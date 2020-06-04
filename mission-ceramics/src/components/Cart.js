@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Cart.scss';
 import { v4 as uuidv4 } from 'uuid';
 import 'font-awesome/css/font-awesome.min.css';
+import squareLogo from '../images/squareup-logo.svg';
 
 export default class Cart extends Component {
 
@@ -104,7 +105,7 @@ export default class Cart extends Component {
             </div>
             <div className="item-qty">
               <label for="quantity"><p className="qty">Qty:</p>
-                <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" class="quantity-input">
+                <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" className="quantity-input">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -128,10 +129,14 @@ export default class Cart extends Component {
           <div className="items-wrapper">
             {cartItems}
           </div>
-          <div className="div-wrapper">
-            <div className="submit-wrapper">
+          <div className="submit-wrapper">
+            <div className="subtotal-wrapper">
               <p className="subtotal-text">Subtotal</p><p className="subtotal-num">{(this.state.totalPrice / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
-              <button className="checkout-btn" onClick={this.createLineItems}>CHECKOUT</button>
+            </div>
+            <button className="checkout-btn" onClick={this.createLineItems}>CHECKOUT</button>
+            <div className="square-logo">
+              <img className="square-logo-image" src={squareLogo} alt="Powered by Square" />
+              <p className="square-logo-text">Powered by Square</p>
             </div>
           </div>
         </div>

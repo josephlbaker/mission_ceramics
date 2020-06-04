@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/ProductDetails.scss';
 import 'font-awesome/css/font-awesome.min.css';
+import closeButton from '../images/x-close-black@2x.png'
 
 const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleClose, showProductDetails, children }) => {
   const showHideClassName = showProductDetails ? "product-details display-block" : "product-details display-none";
@@ -17,7 +18,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
             <p className="product-price">{currentItem.price}</p>
             <p className="product-description">{currentItem.description}</p>
             <label className="qty-label" for="quantity">Qty:
-              <select value={quantity} id="quantity" onChange={setQuantity} class="quantity-input">
+              <select value={quantity} id="quantity" onChange={setQuantity} className="quantity-input">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -28,7 +29,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
 
             <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart}>ADD TO CART</button></div>
           </div>
-          <i className="fa fa-times" aria-hidden="true" onClick={handleClose}></i>
+          <img src={closeButton} alt="close" className="close-button" />
         </section>
       </div>
     );

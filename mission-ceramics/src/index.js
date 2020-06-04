@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider as AlertProvider } from 'react-alert'
-import AlertTemplate from 'react-alert-template-basic'
+// import AlertTemplate from 'react-alert-template-basic'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -13,6 +13,16 @@ const options = {
   offset: '30px',
   transition: 'scale'
 }
+
+const AlertTemplate = ({ style, options, message, close }) => (
+  <div className="alert-modal" style={style}>
+    {options.type === 'info'}
+    {options.type === 'success'}
+    {options.type === 'error'}
+    {message}
+    <button className="close-alert" onClick={close}>X</button>
+  </div>
+)
 
 const Root = () => (
   <AlertProvider template={AlertTemplate} {...options}>
