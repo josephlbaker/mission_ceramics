@@ -22,6 +22,20 @@ class App extends React.Component {
     this.fetchItems();
   }
 
+  toggleCart = () => {
+    this.setState({
+      onCart: true,
+      onHome: false
+    });
+  };
+
+  toggleHome = () => {
+    this.setState({
+      onHome: true,
+      onCart: false
+    });
+  };
+
   setQuantity = (e) => {
     e.preventDefault();
     this.setState({
@@ -139,10 +153,17 @@ class App extends React.Component {
     return (
       <Router>
         <div className="row">
-          <Nav itemsInCart={this.state.itemsInCart} />
+          <Nav
+            toggleCart={this.toggleCart}
+            toggleHome={this.toggleHome}
+            onCart={this.state.onCart}
+            onHome={this.state.onHome}
+            itemsInCart={this.state.itemsInCart}
+          />
           <Switch>
             <Route path="/" exact component={() =>
               <Home
+                toggleCart={this.toggleCart}
                 addToCart={this.addToCart}
                 currentItem={this.state.currentItem}
                 showProductDetails={this.state.showProductDetails}
