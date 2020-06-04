@@ -61,13 +61,14 @@
   cursor: pointer;
 }
 
-.fa-times {
+.close-button {
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
   margin-top: 10px;
   margin-right: 10px;
+  width: 20px;
 }
 
 .qty-label,
@@ -123,25 +124,25 @@
 /////////////////////////////////
 
 @media (max-width: 768px) {
-  .product-details-image {
-    margin-bottom: 10px;
+  .product-details-main {
+    display: block;
+    text-align: center;
   }
   .add-to-cart-btn-wrapper {
     text-align: center;
   }
   .add-to-cart-btn {
-    width: 260px;
+    width: 250px;
   }
   .product-name {
     margin: 0 auto;
-    margin-left: 40px;
+    text-align: left;
+    width: 250px;
   }
   .product-price {
     margin: 0 auto;
-    margin-left: 40px;
-  }
-  .product-details-main {
-    display: block;
+    text-align: left;
+    width: 250px;
   }
   .product-details-text {
     width: 100%;
@@ -149,20 +150,28 @@
   }
   .product-description {
     margin: 0 auto;
-    margin-left: 40px;
+    text-align: left;
+    width: 250px;
   }
   .quantity-input {
     margin-top: 10px;
     margin-left: 40px;
+    text-align: left;
+    width: 250px;
   }
   .product-details-image {
     width: 250px;
     height: 250px;
     display: cover;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
   .product-details-text h3 {
+    margin: 0 auto;
     margin-top: 0;
-    margin-left: 40px;
+    text-align: left;
+    width: 250px;
   }
   .qty-label {
     margin-left: 40px;
