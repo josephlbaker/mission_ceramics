@@ -77,8 +77,8 @@ export default class Cart extends Component {
       body: JSON.stringify({
         order: order,
         idempotency_key: uuidv4(),
-        ask_for_shipping_address: true,
-        redirect_url: "https://test-app.missionceramics.com"
+        ask_for_shipping_address: true
+        // redirect_url: "https://test-app.missionceramics.com"
       })
     })
       .then(response => {
