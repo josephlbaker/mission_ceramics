@@ -27,6 +27,17 @@
   width: 20vw;
 }
 
+.visible-cart {
+  display: block;
+  text-align: right;
+  padding: 0 1rem;
+  padding-top: 5px;
+}
+
+.hidden-cart {
+  display: none;
+}
+
 // HOME ITEMS
 .home-items-row::after {
   content: "";
