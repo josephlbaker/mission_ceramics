@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Cart from './components/Cart';
 import update from 'immutability-helper';
-import { withAlert } from 'react-alert'
+import { withAlert } from 'react-alert';
 
 class App extends React.Component {
 
@@ -79,7 +79,7 @@ class App extends React.Component {
         itemsInCart: count
       });
 
-      alert.show('Added to cart!')
+      alert.show('Added to cart')
     }
   }
 
