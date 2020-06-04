@@ -57,14 +57,13 @@
   height: 300px;
   object-fit:cover;
   opacity: 1;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+  transition: transform .2s;
 }
 
 .home-item-image:hover {
-  opacity: 0.5;
   cursor: pointer;
+  transform: scale(1.05);
+  position: relative;
 }
 
 .home-item-name {
