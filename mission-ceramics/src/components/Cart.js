@@ -105,7 +105,7 @@ export default class Cart extends Component {
             </div>
             <div className="item-qty">
               <label for="quantity"><p className="qty">Qty:</p>
-                <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" class="quantity-input">
+                <select value={i.quantity} onChange={this.props.updateQuantity(i.name)} id="quantity" className="quantity-input">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>

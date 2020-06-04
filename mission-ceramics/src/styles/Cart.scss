@@ -134,7 +134,8 @@
 }
 
 .qty {
-  display: inline;
+  // display: inline;
+  display: none;
   font-size: 14px;
 }
 
@@ -142,6 +143,7 @@
   border: none;
   cursor: pointer;
   background: none;
+  padding: 0;
 }
 
 .remove-button:hover {
