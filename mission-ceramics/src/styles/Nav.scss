@@ -18,18 +18,18 @@
 }
 
 .toolbar__logo {
-  opacity: 0;
+  opacity: 1;
   color: #B92227;
   font-size: 32px;
   font-weight: 500;
-  transition: visibility 0s, opacity 0.5s linear;
+  // transition: visibility 0s, opacity 0.5s linear;
 }
 
-.toolbar__logo.scrolled {
-  opacity: 1;
-  color: #B92227;
-  z-index: 500;
-}
+// .toolbar__logo.scrolled {
+//   opacity: 1;
+//   color: #B92227;
+//   z-index: 500;
+// }
 
 .cart-toolbar__logo {
   color: #B92227;
