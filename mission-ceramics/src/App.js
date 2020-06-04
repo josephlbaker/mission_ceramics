@@ -151,6 +151,7 @@ class App extends React.Component {
                 setItem={this.setItem}
                 setQuantity={this.setQuantity}
                 quantity={this.state.quantity}
+                itemsInCart={this.state.itemsInCart}
               />}
             />
             <Route path="/cart" component={() =>

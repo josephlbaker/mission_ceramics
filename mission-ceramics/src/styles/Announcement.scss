@@ -1,0 +1,25 @@
+.announcement-container {
+  background-color: #B92227;
+  font-family: 'Alegreya', serif;
+  z-index: 500;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement-text {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .announcement-container {
+    height: 176px;
+  }
+  .announcement-text {
+    padding-top: 56px;
+    font-size: 18px;
+  }
+}

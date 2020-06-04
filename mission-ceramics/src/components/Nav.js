@@ -32,10 +32,11 @@ export default class Nav extends Component {
   };
 
   render() {
+    let headerClassName = this.state.onCart ? 'toolbar scrolled' : this.state.isTop ? 'toolbar' : 'toolbar scrolled';
     let navClassName = this.state.onCart ? 'cart-toolbar__logo' : this.state.isTop ? 'toolbar__logo' : 'toolbar__logo scrolled';
     let cartIconClassName = this.props.itemsInCart ? 'visible' : 'hidden';
     return (
-      <header className="toolbar">
+      <header className={headerClassName}>
         <nav className="toolbar__navigation">
           <NavLink exact to="/"><div className={navClassName} onClick={this.onHome}>Mission Ceramics</div></NavLink>
           <div className="spacer" />
