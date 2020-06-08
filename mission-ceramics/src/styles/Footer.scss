@@ -42,6 +42,9 @@
 
 // MEDIA QUERIES
 @media (max-width: 768px) {
+  .footer-container {
+    margin-top: 0;
+  }
   .footer-content {
     float: left;
   }
