@@ -117,11 +117,9 @@ span.step {
 
 // MEDIA QUERIES
 @media (max-width: 768px) {
-  // .toolbar_navigation-items {
-  //   display: none;
-  // }
   .toolbar {
-    opacity: 1;
+    height: 56px;
+    top: 0;
   }
   .toolbar__logo {
     opacity: 1;
