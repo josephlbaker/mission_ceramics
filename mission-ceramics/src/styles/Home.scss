@@ -320,6 +320,42 @@
   }
 }
 
+@media (max-width: 480px) {
+  .row1 {
+    margin-top: 82px;
+  }
+  .home-items-column {
+    margin-bottom: 82px;
+  }
+  .home-item-price {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .row1 {
+    margin-top: 62.5px;
+  }
+  .home-items-column {
+    margin-bottom: 62.5px;
+  }
+  .home-item-price {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .row1 {
+    margin-top: 35px;
+  }
+  .home-items-column {
+    margin-bottom: 35px;
+  }
+  .home-item-price {
+    margin-bottom: 0;
+  }
+}
+
 // MEDIA QUERY GUIDELINES
 // 320px.
 // 480px.

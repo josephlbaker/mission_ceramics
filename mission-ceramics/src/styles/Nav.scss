@@ -3,18 +3,21 @@
   position: fixed;
   width: 100%;
   background: #FFFAEF;
-  height: 56px;
-  top: 0;
+  // height: 56px;
+  // top: 0;
+  top: -50px;
   left: 0;
-  // transition: all 0.5s;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 0.5s;
+  // transition: visibility 0s, opacity 0.5s linear;
   z-index: 1000;
   font-size: 22px;
-  opacity: 0;
+  // opacity: 0;
 }
 
 .toolbar.scrolled {
-  opacity: 1;
+  // opacity: 1;
+  height: 56px;
+  top: 0;
 }
 
 .toolbar__logo {
@@ -122,8 +125,11 @@ span.step {
   }
   .toolbar__logo {
     opacity: 1;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 500;
+  }
+  .cart-toolbar__logo {
+    font-size: 30px;
   }
   .checkout-btn {
     display: none;
@@ -132,6 +138,9 @@ span.step {
 
 @media (max-width: 360px) {
   .cart-toolbar__logo {
+    font-size: 28px;
+  }
+  .toolbar__logo {
     font-size: 28px;
   }
 }
