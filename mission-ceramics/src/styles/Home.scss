@@ -2,6 +2,22 @@
   font-family: 'Alegreya', serif;
 }
 
+span.home-step {
+  background: #B92227;
+  border-radius: 1.2em;
+  -moz-border-radius: 1.2em;
+  -webkit-border-radius: 1.2em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 2.4em;
+  margin-left: 1px;
+  text-align: center;
+  font-size: 14px;
+  width: 2.4em;
+  vertical-align: top
+}
+
 // HEADER
 .home-header {
   height: 600px;
@@ -31,8 +47,7 @@
 .visible-cart {
   display: block;
   text-align: right;
-  padding: 0 1rem;
-  padding-top: 5px;
+  padding: 6rem 9rem;
 }
 
 .hidden-cart {
