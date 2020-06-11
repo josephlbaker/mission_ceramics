@@ -2,6 +2,7 @@
 .cart-container {
   width: 100%;
   font-family: 'Alegreya', serif;
+  font-weight: 500;
   display: flex;
   justify-content: space-evenly;
 }
@@ -130,7 +131,9 @@
 .remove-button {
   margin-left: 2px;
   margin-right: 2px;
-  font-size: 12px;
+  font-size: 14px;
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
 }
 
 .qty {
