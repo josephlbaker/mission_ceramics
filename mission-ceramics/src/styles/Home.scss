@@ -1,10 +1,28 @@
 .home-container {
   font-family: 'Alegreya', serif;
+  font-weight: 500;
+}
+
+span.home-step {
+  background: #B92227;
+  border-radius: 1.2em;
+  -moz-border-radius: 1.2em;
+  -webkit-border-radius: 1.2em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 2.4em;
+  margin-left: 1px;
+  text-align: center;
+  font-size: 14px;
+  width: 2.4em;
+  vertical-align: top
 }
 
 // HEADER
 .home-header {
-  height: 600px;
+  // height: 600px;
+  height: 480px;
   background: #FFFAEF;
 }
 
@@ -12,27 +30,32 @@
   float: left;
   width: 400px;
   margin: 0;
-  padding-left: 8vw;
-  padding-top: 12vh;
-  font-size: 8vw;
+  padding-left: 48px;
+  padding-top: 72px;
+  // padding-left: 8vw;
+  // padding-top: 12vh;
+  // font-size: 8vw;
+  font-size: 128px;
   color: #B92227;
-  line-height: 8vw;
+  line-height: 128px;
+  // line-height: 8vw;
 }
 
 .logo {
   float: right;
   margin: 0;
-  padding-right: 4vw;
+  // padding-right: 4vw;
   // padding-top: 4vh;
-  padding-bottom: 8vh;
-  width: 20vw;
+  // padding-bottom: 8vh;
+  // width: 20vw;
+  width: 240px;
 }
 
 .visible-cart {
   display: block;
   text-align: right;
-  padding: 0 1rem;
-  padding-top: 5px;
+  // padding: 6rem 9rem;
+  padding: 80px;
 }
 
 .hidden-cart {
@@ -54,14 +77,14 @@
 }
 
 .row1 {
-  margin-top: -80px;
+  margin-top: -40px;
 }
 
 .home-items-column {
   float: left;
   text-align: center;
   width: 30%;
-  margin-bottom: 20px;
+  margin-bottom: 64px;
 }
 
 .home-item-image {
@@ -70,6 +93,7 @@
   object-fit:cover;
   opacity: 1;
   transition: transform .2s;
+  margin-bottom: 10px;
 }
 
 .home-item-image:hover {
@@ -80,19 +104,21 @@
 
 .home-item-name {
   color: #B92227;
-  font-size: 24px;
+  font-size: 32px;
+  line-height: 32px;
   width: 300px;
   text-align: left;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .home-item-price {
   color: #000000;
-  font-size: 18px;
+  font-size: 24px;
+  line-height: 24px;
   width: 300px;
   text-align: left;
   margin: 0 auto;
-  margin-bottom: 60px;
 }
 
 // CITYSCAPE
@@ -176,7 +202,8 @@
 // MEDIA QUERIES
 @media (max-width: 1200px) {
   .home-header {
-    height: 550px;
+    // height: 550px;
+    height: 480px;
   }
 
   .featured-product {
@@ -189,7 +216,8 @@
 
 @media (max-width: 1024px) {
   .home-header {
-    height: 500px;
+    // height: 500px;
+    height: 480px;
   }
 
   .featured-product {
@@ -214,7 +242,8 @@
 
 @media (max-width: 900px) {
   .home-header {
-    height: 450px;
+    // height: 450px;
+    height: 480px;
   }
 
   .featured-product {

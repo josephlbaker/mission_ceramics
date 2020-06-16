@@ -2,6 +2,7 @@
 .cart-container {
   width: 100%;
   font-family: 'Alegreya', serif;
+  font-weight: 500;
   display: flex;
   justify-content: space-evenly;
 }
@@ -75,7 +76,8 @@
   text-align: center;
   color: white;
   font-family: 'Alegreya', serif;
-  font-size: 18px;
+  font-size: 32px;
+  font-weight: 500;
   // border-radius: 15px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: #B92227;
@@ -87,7 +89,7 @@
   font-size: 14;
   color: #ABAEB0;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .square-logo-text {
@@ -108,18 +110,21 @@
   margin-top: 20px;
   margin-left: 10px;
   font-size: 24px;
+  line-height: 24px;
 }
 
 .item-qty {
   margin-top: 65px;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .item-price {
   margin-top: 65px;
   margin-left: 300px;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .item-qty-wrapper {
@@ -130,7 +135,10 @@
 .remove-button {
   margin-left: 2px;
   margin-right: 2px;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Alegreya', serif;
+  font-weight: 500;
 }
 
 .qty {

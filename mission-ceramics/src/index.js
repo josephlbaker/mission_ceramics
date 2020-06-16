@@ -9,18 +9,17 @@ import * as serviceWorker from './serviceWorker';
 // alert configuration
 const options = {
   position: 'bottom center',
-  timeout: 5000,
+  timeout: 3000,
   offset: '30px',
   transition: 'scale'
 }
 
-const AlertTemplate = ({ style, options, message, close }) => (
+const AlertTemplate = ({ style, options, message }) => (
   <div className="alert-modal" style={style}>
     {options.type === 'info'}
     {options.type === 'success'}
     {options.type === 'error'}
     {message}
-    <button className="close-alert" onClick={close}>X</button>
   </div>
 )
 
