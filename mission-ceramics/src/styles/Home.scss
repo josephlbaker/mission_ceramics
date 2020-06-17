@@ -24,21 +24,36 @@ span.home-step {
   // height: 600px;
   height: 480px;
   background: #FFFAEF;
+    display: flex;
+  justify-content: center;
+  // width: 100vw;
+  // margin: 0 auto;
 }
 
 .company-name {
-  float: left;
-  width: 400px;
-  margin: 0;
-  padding-left: 48px;
+  display: inline-block;
+  // float: left;
+  // width: 400px;
+  width: 300px;
+  margin: 0 auto;
+  // padding-left: 48px;
   padding-top: 72px;
   // padding-left: 8vw;
   // padding-top: 12vh;
   // font-size: 8vw;
   font-size: 128px;
+  font-weight: 500;
   color: #B92227;
   line-height: 128px;
   // line-height: 8vw;
+}
+
+.company-name-wrapper,
+.header-spacer,
+.logo-wrapper {
+  float: left;
+  width: 30%;
+  text-align: center;
 }
 
 .logo {
@@ -48,7 +63,7 @@ span.home-step {
   // padding-top: 4vh;
   // padding-bottom: 8vh;
   // width: 20vw;
-  width: 240px;
+  width: 300px;
 }
 
 .visible-cart {

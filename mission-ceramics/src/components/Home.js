@@ -36,11 +36,16 @@ export default class Home extends Component {
         />
         <Announcement />
         <div id="homeHeader" className="home-header">
-          <h1 className="company-name">Mission Ceramics</h1>
-          <SvgIcon
-            toggleCart={this.props.toggleCart}
-            itemsInCart={this.props.itemsInCart}
-          />
+          <div className="company-name-wrapper">
+            <h1 className="company-name">Mission Ceramics</h1>
+          </div>
+          <div className="header-spacer"></div>
+          <div className="logo-wrapper">
+            <SvgIcon
+              toggleCart={this.props.toggleCart}
+              itemsInCart={this.props.itemsInCart}
+            />
+          </div>
         </div>
         <div className="home-items">
           <div className="home-items-row row1">
