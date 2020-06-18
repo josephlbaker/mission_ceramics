@@ -47,6 +47,13 @@ export default class Home extends Component {
             />
           </div>
         </div>
+        <div className="mobile-header">
+          <h1 className="company-name-mobile">Mission Ceramics</h1>
+          <SvgIcon
+            toggleCart={this.props.toggleCart}
+            itemsInCart={this.props.itemsInCart}
+          />
+        </div>
         <div className="home-items">
           <div className="home-items-row row1">
             {itemImages[0]}{itemImages[1]}{itemImages[2]}
