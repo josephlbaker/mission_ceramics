@@ -338,12 +338,13 @@ span.home-step {
     color: #B92227;
     font-size: 48px;
     line-height: 48px;
-    width: 300px;
   }
   .logo {
     width: 100px;
-    transform: translate(0, -80px);
     // padding-left: 60px;
+  }
+  .logo path {
+    transform: translate(-30px, -250px);
   }
   .mobile-header .cart-icon {
     margin-top: -15px;
