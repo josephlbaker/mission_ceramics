@@ -287,6 +287,16 @@ span.home-step {
 }
 
 @media (max-width: 768px) {
+  .visible-cart {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo path {
+    transform: translate(80px, 0);
+  }
+}
+
+@media (max-width: 767px) {
   .row1 {
     // margin-top: 80px;
     // margin-top: 62.5px;
@@ -328,7 +338,7 @@ span.home-step {
     color: #B92227;
     font-size: 48px;
     line-height: 48px;
-    // width: 200px;
+    width: 300px;
   }
   .logo {
     width: 100px;
