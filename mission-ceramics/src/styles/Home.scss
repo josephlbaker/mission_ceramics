@@ -5,40 +5,60 @@
 
 span.home-step {
   background: #B92227;
-  border-radius: 1.2em;
-  -moz-border-radius: 1.2em;
-  -webkit-border-radius: 1.2em;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
   color: #ffffff;
   display: inline-block;
   font-weight: bold;
-  line-height: 2.4em;
+  line-height: 1.6em;
   margin-left: 1px;
   text-align: center;
   font-size: 14px;
-  width: 2.4em;
+  width: 1.6em;
   vertical-align: top
 }
 
 // HEADER
+.mobile-header {
+  display: none;
+}
+
 .home-header {
-  // height: 600px;
-  height: 480px;
+  height: 540px;
+  // height: 480px;
   background: #FFFAEF;
+    display: flex;
+  justify-content: center;
+  // width: 100vw;
+  // margin: 0 auto;
 }
 
 .company-name {
-  float: left;
-  width: 400px;
-  margin: 0;
-  padding-left: 48px;
-  padding-top: 72px;
+  display: inline-block;
+  // float: left;
+  // width: 400px;
+  width: 300px;
+  margin: 0 auto;
+  // padding-left: 48px;
+  // padding-top: 72px;
+  padding-top: 122px;
   // padding-left: 8vw;
   // padding-top: 12vh;
   // font-size: 8vw;
   font-size: 128px;
+  font-weight: 500;
   color: #B92227;
   line-height: 128px;
   // line-height: 8vw;
+}
+
+.company-name-wrapper,
+.header-spacer,
+.logo-wrapper {
+  float: left;
+  width: 30%;
+  text-align: center;
 }
 
 .logo {
@@ -48,7 +68,7 @@ span.home-step {
   // padding-top: 4vh;
   // padding-bottom: 8vh;
   // width: 20vw;
-  width: 240px;
+  width: 300px;
 }
 
 .visible-cart {
@@ -269,21 +289,25 @@ span.home-step {
 @media (max-width: 768px) {
   .row1 {
     // margin-top: 80px;
-    margin-top: 62.5px;
+    // margin-top: 62.5px;
+    margin-top: -40px;
   }
 
   .home-items-column {
     float: none;
-    width: 250px;
+    width: 343px;
     margin: 0 auto;
     margin-bottom: 40px;
   }
   .home-item-image {
-    width: 250px;
-    height: 250px;
+    // width: 250px;
+    // height: 250px;
+    width: 343px;
+    height: 343px;
   }
   .home-item-name,
   .home-item-price {
+    margin-left: 0;
     width: 250px;
   }
   .home-items-row {
@@ -292,6 +316,54 @@ span.home-step {
   .home-header {
     display: none;
   }
+  .mobile-header {
+    background-color: #FFFAEF;
+    display: flex;
+    height: 200px;
+  }
+  .company-name-mobile {
+    // padding-top: 32px;
+    padding-left: 17.5px;
+    font-weight: 500;
+    color: #B92227;
+    font-size: 48px;
+    line-height: 48px;
+    // width: 200px;
+  }
+  .logo {
+    width: 100px;
+    transform: translate(0, -80px);
+    // padding-left: 60px;
+  }
+  .mobile-header .cart-icon {
+    margin-top: -15px;
+    width: 40px;
+  }
+
+  .visible-cart {
+    width: 100px;
+    padding: 0;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  // .visible-cart {
+  //   padding: 10px;
+  // }
+  // span.home-step {
+  //   background: #B92227;
+  //   border-radius: 0.8em;
+  //   -moz-border-radius: 0.8em;
+  //   -webkit-border-radius: 0.8em;
+  //   color: #ffffff;
+  //   display: inline-block;
+  //   font-weight: bold;
+  //   line-height: 1.6em;
+  //   margin-left: 1px;
+  //   text-align: center;
+  //   font-size: 14px;
+  //   width: 1.6em;
+  //   vertical-align: top
+  // }
   .featured-column1 {
     width: 100%;
     padding-top: 96px;
@@ -351,7 +423,8 @@ span.home-step {
 
 @media (max-width: 480px) {
   .row1 {
-    margin-top: 82px;
+    // margin-top: 82px;
+    margin-top: -16px;
   }
   .home-items-column {
     margin-bottom: 82px;
@@ -362,11 +435,16 @@ span.home-step {
 }
 
 @media (max-width: 400px) {
+  .home-item-image {
+    width: 340px;
+    height: 340px;
+  }
   .row1 {
-    margin-top: 62.5px;
+    margin-top: -17.5px;
   }
   .home-items-column {
     margin-bottom: 62.5px;
+    width: 340px;
   }
   .home-item-price {
     margin-bottom: 0;
@@ -374,11 +452,17 @@ span.home-step {
 }
 
 @media (max-width: 320px) {
+  .home-item-image {
+    width: 300px;
+    height: 300px;
+  }
+
   .row1 {
-    margin-top: 35px;
+    margin-top: -16px;
   }
   .home-items-column {
     margin-bottom: 35px;
+    width: 300px;
   }
   .home-item-price {
     margin-bottom: 0;

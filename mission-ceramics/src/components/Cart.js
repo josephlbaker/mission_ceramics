@@ -133,7 +133,7 @@ export default class Cart extends Component {
             <div className="subtotal-wrapper">
               <p className="subtotal-text">Subtotal</p><p className="subtotal-num">{(this.state.totalPrice / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
             </div>
-            <button className="checkout-btn" onClick={this.createLineItems}>CHECKOUT</button>
+            <button className="checkout-btn" onClick={this.createLineItems}>checkout</button>
             <div className="square-logo">
               <img className="square-logo-image" src={squareLogo} alt="Powered by Square" />
               <p className="square-logo-text">Powered by Square</p>
