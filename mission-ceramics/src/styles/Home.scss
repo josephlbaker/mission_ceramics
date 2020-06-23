@@ -76,7 +76,7 @@ span.home-step {
   display: block;
   text-align: right;
   // padding: 6rem 9rem;
-  padding: 80px;
+  padding: 60px;
 }
 
 .hidden-cart {
@@ -340,7 +340,7 @@ span.home-step {
     font-size: 48px;
     line-height: 48px;
     width: 100px;
-    margin-right: 55vw;
+    margin-right: 68vw;
   }
   .logo {
     width: 100px;
@@ -431,6 +431,42 @@ span.home-step {
   }
   .newsletter-registration-column1 {
     width: 33.33%;
+  }
+}
+
+@media (max-width: 750px) {
+  .company-name-mobile {
+    margin-right: 66vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .company-name-mobile {
+    margin-right: 64vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .company-name-mobile {
+    margin-right: 60vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .company-name-mobile {
+    margin-right: 56vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .company-name-mobile {
+    margin-right: 54vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .company-name-mobile {
+    margin-right: 52vw;
   }
 }
 
