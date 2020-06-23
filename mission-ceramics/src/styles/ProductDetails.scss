@@ -51,7 +51,8 @@
   font-weight: 500;
   position: relative;
   border: 0;
-  padding: 10px 25px;
+  // padding: 10px 25px;
+  padding: 10px 25px 15px 25px;
   display: inline-block;
   text-align: center;
   color: white;
@@ -69,8 +70,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 32px;
+  margin-right: 32px;
   width: 20px;
 }
 
@@ -81,6 +82,7 @@
 
 .product-description,
 .product-price {
+  color: #333333;
   font-size: 24px;
 }
 
@@ -152,6 +154,7 @@
     margin: 0 auto;
     text-align: left;
     width: 250px;
+    margin-bottom: 12px;
   }
   .product-details-text {
     width: 100%;
@@ -161,6 +164,7 @@
     margin: 0 auto;
     text-align: left;
     width: 250px;
+    margin-bottom: 12px;
   }
   .quantity-input {
     margin-top: 10px;
@@ -174,13 +178,14 @@
     display: cover;
     margin: 0 auto;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .product-details-text h3 {
     margin: 0 auto;
     margin-top: 0;
     text-align: left;
     width: 250px;
+    margin-bottom: 12px;
   }
   .qty-label {
     margin-left: 40px;
@@ -191,3 +196,27 @@
     margin-bottom: 20px;
   }
 }
+
+@media (min-width: 1800px) {
+  .product-details-main {
+    width: 45vw;
+  }
+}
+
+@media (min-width: 2400px) {
+  .product-details-main {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 3000px) {
+  .product-details-main {
+    width: 20vw;
+  }
+}
+
+// @media (min-width: 2400px) {
+//   .product-details-main {
+//     width: 25vw;
+//   }
+// }
