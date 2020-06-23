@@ -1,7 +1,7 @@
 .home-container {
   font-family: 'Alegreya', serif;
   font-weight: 500;
-  max-width: 2400px;
+  // max-width: 2400px;
 }
 
 span.home-step {
@@ -27,7 +27,7 @@ span.home-step {
 }
 
 .home-header {
-  height: 480px;
+  height: 560px;
   // height: 480px;
   background: #FFFAEF;
     display: flex;
@@ -135,7 +135,7 @@ span.home-step {
 }
 
 .home-item-price {
-  color: #000000;
+  color: #333333;
   font-size: 24px;
   line-height: 24px;
   width: 300px;
@@ -225,7 +225,7 @@ span.home-step {
 @media (max-width: 1200px) {
   .home-header {
     // height: 550px;
-    height: 480px;
+    height: 560px;
   }
 
   .featured-product {
@@ -239,7 +239,7 @@ span.home-step {
 @media (max-width: 1024px) {
   .home-header {
     // height: 500px;
-    height: 480px;
+    height: 560px;
   }
 
   .featured-product {
@@ -529,6 +529,35 @@ span.home-step {
     margin-bottom: 0;
   }
 }
+
+@media (min-width: 1800px) {
+  .home-items-column {
+    width: 25%;
+  }
+  .company-name-wrapper,
+  .header-spacer,
+  .logo-wrapper {
+    width: 25%;
+  }
+}
+
+@media (min-width: 2400px) {
+  .home-items-column {
+    width: 15%;
+  }
+  .company-name-wrapper,
+  .header-spacer,
+  .logo-wrapper {
+    width: 15%;
+  }
+}
+
+// @media (min-width: 1800px) {
+//   .home-item-image {
+//     width: 500px;
+//     height: 500px;
+//   }
+// }
 
 // MEDIA QUERY GUIDELINES
 // 320px.
