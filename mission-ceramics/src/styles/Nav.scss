@@ -5,7 +5,7 @@
   background: #FFFAEF;
   // height: 56px;
   // top: 0;
-  top: -50px;
+  top: -70px;
   left: 0;
   transition: all 0.5s;
   // transition: visibility 0s, opacity 0.5s linear;
@@ -91,9 +91,17 @@
   display: block;
 }
 
-// .checkout-btn {
-//   display: inline-block;
-// }
+.mc-hidden {
+  display: none;
+}
+
+.mc-visible {
+  display: block;
+}
+
+.mc-visible .logo path {
+  transform: translate(400px, 0);
+}
 
 .toolbar__toggle-button {
   display: none;
@@ -131,6 +139,9 @@ span.step {
   }
   .checkout-btn {
     display: none;
+  }
+  .mc-visible .logo path {
+    transform: translate(100px, 0);
   }
 }
 

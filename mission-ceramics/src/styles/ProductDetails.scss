@@ -41,6 +41,7 @@
 }
 
 .product-name {
+  font-weight: 500;
   font-size: 32px;
   color: #B92227;
 }
@@ -145,6 +146,7 @@
     margin: 0 auto;
     text-align: left;
     width: 250px;
+    font-weight: 500;
   }
   .product-price {
     margin: 0 auto;
@@ -182,5 +184,10 @@
   }
   .qty-label {
     margin-left: 40px;
+  }
+  .close-button {
+    all: unset;
+    width: 20px;
+    margin-bottom: 20px;
   }
 }

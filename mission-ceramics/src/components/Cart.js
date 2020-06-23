@@ -77,7 +77,8 @@ export default class Cart extends Component {
       body: JSON.stringify({
         order: order,
         idempotency_key: uuidv4(),
-        ask_for_shipping_address: true
+        ask_for_shipping_address: true,
+        merchant_support_email: "hello@missionceramics.com",
         // redirect_url: "https://test-app.missionceramics.com"
       })
     })
