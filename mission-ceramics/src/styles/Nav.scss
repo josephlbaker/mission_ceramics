@@ -140,6 +140,9 @@ span.step {
   .checkout-btn {
     display: none;
   }
+}
+
+@media (max-width: 480px) {
   .mc-visible .logo path {
     transform: translate(100px, 0);
   }
@@ -147,15 +150,9 @@ span.step {
 
 @media (max-width: 360px) {
   .cart-toolbar__logo {
-    font-size: 28px;
+    font-size: 24px;
   }
   .toolbar__logo {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
-
-// @media (min-width: 769px) {
-//   .toolbar__toggle-button {
-//     display: none;
-//   }
-// }
