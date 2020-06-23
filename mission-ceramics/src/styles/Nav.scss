@@ -5,7 +5,7 @@
   background: #FFFAEF;
   // height: 56px;
   // top: 0;
-  top: -70px;
+  top: -80px;
   left: 0;
   transition: all 0.5s;
   // transition: visibility 0s, opacity 0.5s linear;
@@ -16,13 +16,15 @@
 
 .toolbar.scrolled {
   // opacity: 1;
-  height: 56px;
+  // height: 56px;
+  height: 80px;
   top: 0;
 }
 
 .toolbar__logo {
   opacity: 1;
   color: #B92227;
+  margin-top: 30px;
   font-size: 32px;
   font-weight: 500;
   // transition: visibility 0s, opacity 0.5s linear;
