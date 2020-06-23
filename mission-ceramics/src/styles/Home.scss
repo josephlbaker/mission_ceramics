@@ -1,6 +1,7 @@
 .home-container {
   font-family: 'Alegreya', serif;
   font-weight: 500;
+  max-width: 2400px;
 }
 
 span.home-step {
@@ -25,7 +26,7 @@ span.home-step {
 }
 
 .home-header {
-  height: 540px;
+  height: 480px;
   // height: 480px;
   background: #FFFAEF;
     display: flex;
@@ -338,13 +339,14 @@ span.home-step {
     color: #B92227;
     font-size: 48px;
     line-height: 48px;
+    width: 100px;
+    margin-right: 400px;
   }
   .logo {
     width: 100px;
-    // padding-left: 60px;
   }
   .logo path {
-    transform: translate(-30px, -250px);
+    transform: translate(0, -200px);
   }
   .mobile-header .cart-icon {
     margin-top: -15px;
@@ -433,6 +435,10 @@ span.home-step {
 }
 
 @media (max-width: 480px) {
+  .company-name-mobile {
+    width: inherit;
+    margin-right: 0;
+  }
   .row1 {
     // margin-top: 82px;
     margin-top: -16px;
@@ -442,6 +448,13 @@ span.home-step {
   }
   .home-item-price {
     margin-bottom: 0;
+  }
+  .logo {
+    width: 100px;
+    // padding-left: 60px;
+  }
+  .logo path {
+    transform: translate(-30px, -250px);
   }
 }
 
