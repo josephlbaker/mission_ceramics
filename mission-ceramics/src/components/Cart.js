@@ -61,7 +61,7 @@ export default class Cart extends Component {
             order: res.data.order,
             orderId: res.data.order.id
           })
-          this.createCheckout(res.data.order);
+          this.createCheckout(res.data);
         })
       })
       .catch(err => { console.log(err) });

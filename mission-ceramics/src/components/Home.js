@@ -61,7 +61,7 @@ export default class Home extends Component {
           <div className="home-items-row">
             {itemImages[3]}{itemImages[4]}{itemImages[5]}
           </div>
-          {/* <div className="home-items-row">
+          <div className="home-items-row">
             {itemImages[6]}{itemImages[7]}{itemImages[8]}
           </div>
           <div className="home-items-row">
@@ -77,8 +77,8 @@ export default class Home extends Component {
             {itemImages[18]}{itemImages[19]}{itemImages[20]}
           </div>
           <div className="home-items-row">
-            {itemImages[21]}{itemImages[22]}
-          </div> */}
+            {itemImages[21]}{itemImages[22]}{itemImages[23]}
+          </div>
         </div>
         <Footer />
       </div>
