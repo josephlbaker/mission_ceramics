@@ -34,40 +34,40 @@ export default class Cart extends Component {
       }
       line_items.push(line_item);
     }
-    this.createOrder(line_items);
+    this.createCheckout(line_items);
   }
 
-  createOrder = (line_items) => {
-    fetch('https://test-app.missionceramics.com/orders', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        order: {
-          line_items: line_items
-        },
-        idempotency_key: uuidv4(),
-      })
-    })
-      .then(response => {
-        response.json().then(data => ({
-          data: data,
-          status: response.status
-        })
-        ).then(res => {
-          this.setState({
-            order: res.data.order,
-            orderId: res.data.order.id
-          })
-          this.createCheckout(res.data);
-        })
-      })
-      .catch(err => { console.log(err) });
-  }
+  // createOrder = (line_items) => {
+  //   fetch('https://test-app.missionceramics.com/orders', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({
+  //       order: {
+  //         line_items: line_items
+  //       },
+  //       idempotency_key: uuidv4(),
+  //     })
+  //   })
+  //     .then(response => {
+  //       response.json().then(data => ({
+  //         data: data,
+  //         status: response.status
+  //       })
+  //       ).then(res => {
+  //         this.setState({
+  //           order: res.data.order,
+  //           orderId: res.data.order.id
+  //         })
+  //         this.createCheckout(res.data.order);
+  //       })
+  //     })
+  //     .catch(err => { console.log(err) });
+  // }
 
-  createCheckout = (order) => {
+  createCheckout = (line_items) => {
     fetch('https://test-app.missionceramics.com/checkout', {
       method: 'POST',
       headers: {
@@ -75,7 +75,13 @@ export default class Cart extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        order: order,
+        order: {
+          order: {
+            location_id: process.env.REACT_APP_LOCATION_ID,
+            line_items: line_items
+          },
+          idempotency_key: uuidv4()
+        },
         idempotency_key: uuidv4(),
         ask_for_shipping_address: true,
         merchant_support_email: "hello@missionceramics.com",

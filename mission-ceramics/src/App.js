@@ -128,7 +128,7 @@ class App extends React.Component {
       .then(res => res.json())
       .then(res => {
         for (let i = 0; i < res.objects.length; i++) {
-          if (res.objects[i].type === 'ITEM') {
+          if (res.objects[i].type === 'ITEM' && res.objects[i].present_at_all_locations === true) {
             let item = {};
             item['name'] = res.objects[i].item_data.name;
             item['price'] = (res.objects[i].item_data.variations[0].item_variation_data.price_money.amount / 100).toLocaleString("en-US", { style: "currency", currency: "USD" });
