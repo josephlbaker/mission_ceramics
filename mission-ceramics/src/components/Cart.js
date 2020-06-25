@@ -123,7 +123,7 @@ export default class Cart extends Component {
               <button className="remove-button" onClick={() => this.props.removeItem(i)}>Remove</button>
             </div>
             <div className="item-price">
-              {parseInt((i.price.replace(/[$.,]+/g, '')) * parseInt(i.quantity) / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}
+              {(parseInt((i.price.replace(/[$.,]+/g, '')) * parseInt(i.quantity)) / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}
             </div>
           </div>
         </div>
