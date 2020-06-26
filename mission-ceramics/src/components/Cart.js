@@ -68,7 +68,7 @@ export default class Cart extends Component {
   // }
 
   createCheckout = (line_items) => {
-    fetch('https://missionceramics.com/checkout', {
+    fetch('https://test-app.missionceramics.com/checkout', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -149,7 +149,7 @@ export default class Cart extends Component {
         </div>
       )
     } else {
-      window.location.replace("https://missionceramics.com");
+      window.location.replace("https://test-app.missionceramics.com");
     }
   }
 }
