@@ -38,7 +38,7 @@ export default class Cart extends Component {
   }
 
   createOrder = (line_items) => {
-    fetch('https://test-app.missionceramics.com/orders', {
+    fetch('https://missionceramics.com/orders', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -68,7 +68,7 @@ export default class Cart extends Component {
   }
 
   createCheckout = (order) => {
-    fetch('https://test-app.missionceramics.com/checkout', {
+    fetch('https://missionceramics.com/checkout', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -143,7 +143,7 @@ export default class Cart extends Component {
         </div>
       )
     } else {
-      window.location.replace("https://test-app.missionceramics.com");
+      window.location.replace("https://missionceramics.com");
     }
   }
 }
