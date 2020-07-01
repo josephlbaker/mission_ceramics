@@ -102,6 +102,7 @@ class App extends React.Component {
       currentItem: item,
       showProductDetails: true
     })
+    document.body.classList.add("modal-open");
   }
 
   hideProductDetails = (e) => {
@@ -118,6 +119,7 @@ class App extends React.Component {
       return false;
     } else {
       this.setState({ showProductDetails: false })
+      document.body.classList.remove("modal-open");
     }
   }
 

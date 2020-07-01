@@ -23,3 +23,7 @@ html {
   overflow-x: initial;
   /* width: 100%; */
 }
+
+body.modal-open{
+  overflow:hidden;
+}
