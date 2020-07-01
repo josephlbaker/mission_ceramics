@@ -134,15 +134,13 @@
 /////////////////////////////////
 
 @media (max-width: 600px) {
-  .product-details {
-    overflow-y: auto;
-  }
   .product-details-main {
     display: block;
     text-align: center;
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling:touch
   }
   .add-to-cart-btn-wrapper {
     text-align: center;
