@@ -21,10 +21,8 @@ body, html {
 
 html {
   overflow-x: initial;
-  /* width: 100%; */
 }
 
 body.modal-open{
-  overflow:hidden;
-  position: fixed;
+  overflow: hidden;
 }

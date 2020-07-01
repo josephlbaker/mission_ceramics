@@ -134,6 +134,9 @@
 /////////////////////////////////
 
 @media (max-width: 600px) {
+  .product-details {
+    overflow-y: auto;
+  }
   .product-details-main {
     display: block;
     text-align: center;
