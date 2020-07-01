@@ -133,13 +133,17 @@
 
 /////////////////////////////////
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .product-details-main {
     display: block;
     text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
   }
   .add-to-cart-btn-wrapper {
     text-align: center;
+    margin-bottom: 20px;
   }
   .add-to-cart-btn {
     width: 250px;
@@ -193,7 +197,67 @@
   .close-button {
     all: unset;
     width: 20px;
-    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+  .close-button-wrapper {
+    bottom: 0;
+    position: sticky;
+    width: 100vw;
+    height: 44px;
+    background-color: #ffffff;
+  }
+}
+// iPhone X
+@media only screen
+and (device-width : 375px)
+and (device-height : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .close-button {
+    margin-top: 24.5px;
+  }
+  .close-button-wrapper {
+    height: 69px;
+    bottom: 69px;
+    position: absolute;
+  }
+}
+
+// iPhone 8
+@media only screen
+and (device-width : 375px)
+and (device-height : 667px)
+and (-webkit-device-pixel-ratio : 2) {
+  .close-button-wrapper {
+    height: 88px;
+  }
+}
+
+// iPhone 8 plus
+@media only screen
+and (device-width : 414px)
+and (device-height : 736px)
+and (-webkit-device-pixel-ratio : 3) {
+  .close-button-wrapper {
+    height: 88px;
+  }
+}
+
+// iPhone 5
+@media (max-width: 320px) {
+  .close-button-wrapper {
+    height: 88px;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-details-image {
+    margin-top: 62.5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .product-details-image {
+    margin-top: 35px;
   }
 }
 

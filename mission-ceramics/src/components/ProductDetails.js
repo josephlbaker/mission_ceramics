@@ -29,7 +29,9 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
 
             <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart}>add to cart</button></div>
           </div>
-          <img src={closeButton} alt="close" className="close-button" />
+          <div className="close-button-wrapper">
+            <img src={closeButton} alt="close" className="close-button" />
+          </div>
         </section>
       </div>
     );
