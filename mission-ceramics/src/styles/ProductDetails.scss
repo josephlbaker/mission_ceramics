@@ -135,16 +135,18 @@
 
 @media (max-width: 600px) {
   .product-details {
-    overflow: hidden;
+    // overflow: hidden;
+    position: fixed;
+    overflow-y: auto;
   }
   .product-details-main {
-    position: absolute;
+    // position: absolute;
     display: block;
     text-align: center;
     width: 100vw;
     height: 100vh;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
+    // -webkit-overflow-scrolling: touch;
+    // overflow-y: scroll;
   }
   .add-to-cart-btn-wrapper {
     text-align: center;
