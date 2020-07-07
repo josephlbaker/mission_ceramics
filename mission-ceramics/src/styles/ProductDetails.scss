@@ -148,8 +148,8 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    // -webkit-overflow-scrolling: touch;
-    // overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
   }
   .add-to-cart-btn-wrapper {
     text-align: center;
@@ -229,8 +229,9 @@ and (-webkit-device-pixel-ratio : 3) {
   }
   .close-button-wrapper {
     height: 69px;
-    bottom: 69px;
-    position: absolute;
+    margin-bottom: 69px;
+    // bottom: 69px;
+    // position: absolute;
   }
 }
 
