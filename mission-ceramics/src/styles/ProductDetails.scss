@@ -138,9 +138,6 @@
 /////////////////////////////////
 
 @media (max-width: 600px) {
-  .product-details {
-    // overflow: hidden;
-  }
   .product-details-main {
     // position: fixed;
     position: relative;
@@ -229,9 +226,7 @@ and (-webkit-device-pixel-ratio : 3) {
   }
   .close-button-wrapper {
     height: 69px;
-    margin-bottom: 69px;
-    // bottom: 69px;
-    // position: absolute;
+    margin-bottom: 20px;
   }
 }
 
