@@ -247,6 +247,12 @@ and (-webkit-device-pixel-ratio : 2) {
   .close-button-wrapper {
     height: 88px;
   }
+  .product-details-spacer {
+    display: block;
+    height: 44px;
+    background-color: #ffffff;
+    width: 100%;
+  }
 }
 
 // iPhone 8 plus
@@ -256,6 +262,12 @@ and (device-height : 736px)
 and (-webkit-device-pixel-ratio : 3) {
   .close-button-wrapper {
     height: 88px;
+  }
+  .product-details-spacer {
+    display: block;
+    height: 44px;
+    background-color: #ffffff;
+    width: 100%;
   }
 }
 
