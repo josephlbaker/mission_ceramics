@@ -4,6 +4,22 @@ import 'font-awesome/css/font-awesome.min.css';
 import closeButton from '../images/x-close-black@2x.png'
 
 const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleClose, showProductDetails, children }) => {
+  let baseWindowHeight = Math.max(window.innerHeight);
+  let classAdded = false;
+  let documentBody = document.body;
+  document.addEventListener('scroll', function (e) {
+    let newWindowHeight = Math.max(window.innerHeight);
+    if (newWindowHeight - 50 > baseWindowHeight) {
+      if (!document.body.classList.contains("ios-toolbar-gone")) {
+        document.body.classList.add("ios-toolbar-gone");
+      }
+    } else {
+      if (document.body.classList.contains("ios-toolbar-gone")) {
+        document.body.classList.remove("ios-toolbar-gone");
+      }
+    }
+  });
+
   const showHideClassName = showProductDetails ? "product-details display-block" : "product-details display-none";
   if (currentItem === null) {
     return null;

@@ -239,6 +239,9 @@ and (-webkit-device-pixel-ratio : 3) {
     background-color: #ffffff;
     width: 100%;
   }
+  .ios-toolbar-gone .close-button-wrapper {
+    transform: translateY(-69px);
+  }
 }
 
 // iPhone 8
@@ -255,6 +258,9 @@ and (-webkit-device-pixel-ratio : 2) {
     background-color: #ffffff;
     width: 100%;
   }
+  .ios-toolbar-gone .close-button-wrapper {
+    transform: translateY(-88px);
+  }
 }
 
 // iPhone 8 plus
@@ -270,6 +276,9 @@ and (-webkit-device-pixel-ratio : 3) {
     height: 44px;
     background-color: #ffffff;
     width: 100%;
+  }
+  .ios-toolbar-gone .close-button-wrapper {
+    transform: translateY(-88px);
   }
 }
 
