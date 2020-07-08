@@ -31,8 +31,8 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
           </div>
           <div className="close-button-wrapper">
             <img src={closeButton} alt="close" className="close-button" />
+            <div className="product-details-spacer"></div>
           </div>
-          <div className="product-details-spacer"></div>
         </section>
       </div>
     );
