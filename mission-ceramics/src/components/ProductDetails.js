@@ -32,6 +32,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
           <div className="close-button-wrapper">
             <img src={closeButton} alt="close" className="close-button" />
           </div>
+          <div className="product-details-spacer"></div>
         </section>
       </div>
     );

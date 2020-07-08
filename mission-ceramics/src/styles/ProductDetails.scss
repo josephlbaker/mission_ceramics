@@ -79,6 +79,10 @@
   width: 20px;
 }
 
+.product-details-spacer {
+  display: none;
+}
+
 .qty-label,
 .quantity-input {
   display: none;
@@ -226,7 +230,12 @@ and (-webkit-device-pixel-ratio : 3) {
   }
   .close-button-wrapper {
     height: 69px;
-    margin-bottom: 20px;
+  }
+  .product-details-spacer {
+    display: block;
+    height: 44px;
+    background-color: #ffffff;
+    width: 100%;
   }
 }
 
