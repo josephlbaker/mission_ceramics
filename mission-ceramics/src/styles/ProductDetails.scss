@@ -222,13 +222,13 @@
     background-color: #ffffff;
   }
   .product-details-spacer {
-    display: block;
+    display: none;
     height: 44px;
     background-color: #ffffff;
     width: 100%;
   }
   .ios-toolbar-gone .product-details-spacer {
-    display: none;
+    display: block;
   }
 }
 // iPhone X
@@ -243,10 +243,7 @@ and (-webkit-device-pixel-ratio : 3) {
     height: 69px;
   }
   .product-details-spacer {
-    display: block;
     height: 69px;
-    background-color: #ffffff;
-    width: 100%;
   }
 }
 
@@ -258,12 +255,6 @@ and (-webkit-device-pixel-ratio : 2) {
   .close-button-wrapper {
     height: 44px;
   }
-  .product-details-spacer {
-    display: block;
-    height: 44px;
-    background-color: #ffffff;
-    width: 100%;
-  }
 }
 
 // iPhone 8 plus
@@ -273,12 +264,6 @@ and (device-height : 736px)
 and (-webkit-device-pixel-ratio : 3) {
   .close-button-wrapper {
     height: 44px;
-  }
-  .product-details-spacer {
-    display: block;
-    height: 44px;
-    background-color: #ffffff;
-    width: 100%;
   }
 }
 
