@@ -154,7 +154,6 @@
   }
   .add-to-cart-btn-wrapper {
     text-align: center;
-    margin-bottom: 20px;
   }
   .add-to-cart-btn {
     width: 250px;
@@ -175,6 +174,7 @@
     overflow: scroll;
     width: 100%;
     margin-top: 0;
+    margin-bottom: 10px;
     -webkit-overflow-scrolling: touch;
   }
   .product-description {
@@ -213,11 +213,13 @@
     margin-top: 12px;
   }
   .close-button-wrapper {
+    bottom: 0;
+    position: sticky;
+  }
+  .close-button-container {
     width: 100vw;
     height: 44px;
     background-color: #ffffff;
-    bottom: 0;
-    position: fixed;
   }
   .product-details-spacer {
     display: block;
@@ -237,7 +239,7 @@ and (-webkit-device-pixel-ratio : 3) {
   .close-button {
     margin-top: 24.5px;
   }
-  .close-button-wrapper {
+  .close-button-container {
     height: 69px;
   }
   .product-details-spacer {
