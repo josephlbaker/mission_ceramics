@@ -9,7 +9,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
   let documentBody = document.body;
   document.addEventListener('scroll', function (e) {
     let newWindowHeight = Math.max(window.innerHeight);
-    if (newWindowHeight - 50 > baseWindowHeight) {
+    if (newWindowHeight - 65 > baseWindowHeight) {
       if (!document.body.classList.contains("ios-toolbar-gone")) {
         document.body.classList.add("ios-toolbar-gone");
       }
@@ -46,9 +46,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
             <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart}>add to cart</button></div>
           </div>
           <div className="close-button-wrapper">
-            <div className="close-button-container">
-              <img src={closeButton} alt="close" className="close-button" />
-            </div>
+            <img src={closeButton} alt="close" className="close-button" />
           </div>
         </section>
       </div>

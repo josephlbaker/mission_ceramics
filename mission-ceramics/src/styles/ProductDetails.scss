@@ -214,12 +214,14 @@
   }
   .close-button-wrapper {
     bottom: 0;
-    position: sticky;
-  }
-  .close-button-container {
+    position: fixed;
+    transition: all ease 0.2s;
     width: 100vw;
-    height: 44px;
+    height: 88px;
     background-color: #ffffff;
+  }
+  .ios-toolbar-gone .close-button-wrapper {
+    transform: translateY(-44px);
   }
 }
 // iPhone X
@@ -230,8 +232,8 @@ and (-webkit-device-pixel-ratio : 3) {
   .close-button {
     margin-top: 24.5px;
   }
-  .close-button-container {
-    height: 69px;
+  .close-button-wrapper {
+    height: 138px;
   }
   .product-details-spacer {
     display: block;
@@ -249,7 +251,7 @@ and (-webkit-device-pixel-ratio : 3) {
 and (device-width : 375px)
 and (device-height : 667px)
 and (-webkit-device-pixel-ratio : 2) {
-  .close-button-container {
+  .close-button-wrapper {
     height: 88px;
   }
   .product-details-spacer {
@@ -259,7 +261,7 @@ and (-webkit-device-pixel-ratio : 2) {
     width: 100%;
   }
   .ios-toolbar-gone .close-button-wrapper {
-    transform: translateY(-88px);
+    transform: translateY(-44px);
   }
 }
 
@@ -268,7 +270,7 @@ and (-webkit-device-pixel-ratio : 2) {
 and (device-width : 414px)
 and (device-height : 736px)
 and (-webkit-device-pixel-ratio : 3) {
-  .close-button-container {
+  .close-button-wrapper {
     height: 88px;
   }
   .product-details-spacer {
@@ -278,14 +280,17 @@ and (-webkit-device-pixel-ratio : 3) {
     width: 100%;
   }
   .ios-toolbar-gone .close-button-wrapper {
-    transform: translateY(-88px);
+    transform: translateY(-44px);
   }
 }
 
 // iPhone 5
 @media (max-width: 320px) {
-  .close-button-container {
+  .close-button-wrapper {
     height: 88px;
+  }
+  .ios-toolbar-gone .close-button-wrapper {
+    transform: translateY(-44px);
   }
 }
 
