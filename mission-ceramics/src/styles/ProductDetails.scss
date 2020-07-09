@@ -222,13 +222,13 @@
     background-color: #ffffff;
   }
   .product-details-spacer {
-    display: block;
+    display: none;
     height: 44px;
     background-color: #ffffff;
     width: 100%;
   }
   .ios-toolbar-gone .product-details-spacer {
-    display: none;
+    display: block;
   }
 }
 // iPhone X
