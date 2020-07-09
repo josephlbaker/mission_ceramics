@@ -213,22 +213,20 @@
     margin-top: 12px;
   }
   .close-button-wrapper {
-    bottom: 0;
-    position: fixed;
-  }
-  .close-button-container {
     width: 100vw;
     height: 44px;
     background-color: #ffffff;
+    bottom: 0;
+    position: fixed;
   }
   .product-details-spacer {
-    display: none;
+    display: block;
     height: 44px;
     background-color: #ffffff;
     width: 100%;
   }
   .ios-toolbar-gone .product-details-spacer {
-    display: block;
+    display: none;
   }
 }
 // iPhone X
@@ -239,7 +237,7 @@ and (-webkit-device-pixel-ratio : 3) {
   .close-button {
     margin-top: 24.5px;
   }
-  .close-button-container {
+  .close-button-wrapper {
     height: 69px;
   }
   .product-details-spacer {
