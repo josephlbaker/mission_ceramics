@@ -14,22 +14,25 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
           <img src={currentItem.image} alt="home-item" className="product-details-image" />
           {children}
           <div className="product-details-text">
-            <h3 className="product-name">{currentItem.name}</h3>
-            <p className="product-price">{currentItem.price}</p>
-            <p className="product-description">{currentItem.description}</p>
-            <label className="qty-label" for="quantity">Qty:
+            <div className="scrollable-content">
+              <h3 className="product-name">{currentItem.name}</h3>
+              <p className="product-price">{currentItem.price}</p>
+              <p className="product-description">{currentItem.description}</p>
+              <div className="close-button-container">
+                <img src={closeButton} alt="close" className="close-button" />
+              </div>
+              {/* <div className="product-details-spacer"></div> */}
+              <label className="qty-label" for="quantity">Qty:
               <select value={quantity} id="quantity" onChange={setQuantity} className="quantity-input">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </label>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </label>
+            </div>
             <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart}>add to cart</button></div>
-          </div>
-          <div className="close-button-container">
-            <img src={closeButton} alt="close" className="close-button" />
           </div>
         </section>
       </div>
