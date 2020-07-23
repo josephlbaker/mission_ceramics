@@ -35,6 +35,7 @@ const ProductDetails = ({ quantity, setQuantity, addToCart, currentItem, handleC
             <div className="add-to-cart-btn-wrapper"><button className="add-to-cart-btn" onClick={addToCart}>add to cart</button></div>
           </div>
         </section>
+        <div className="add-to-cart-btn-wrapper-mobile"><button className="add-to-cart-btn" onClick={addToCart}>add to cart</button></div>
       </div>
     );
   }
