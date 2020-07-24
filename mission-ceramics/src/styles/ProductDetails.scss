@@ -81,6 +81,7 @@
   margin-top: 32px;
   margin-right: 32px;
   width: 20px;
+  height: 20px;
 }
 
 // .product-details-spacer {
@@ -233,18 +234,24 @@
   .qty-label {
     margin-left: 40px;
   }
+
   .close-button {
-    all: unset;
-    width: 20px;
-    margin-top: 28.5px;
+    margin-top: 21.25px;
+    margin-right: 21.25px;
   }
 
-  .close-button-container {
-    width: 100vw;
-    height: 77px;
-    background-color: #ffffff;
-    bottom: 77px;
-  }
+  // .close-button {
+  //   all: unset;
+  //   width: 20px;
+  //   margin-top: 28.5px;
+  // }
+
+  // .close-button-container {
+  //   width: 100vw;
+  //   height: 77px;
+  //   background-color: #ffffff;
+  //   bottom: 77px;
+  // }
 
   .scrollable-content {
     padding-bottom: 77px;
@@ -266,10 +273,11 @@ and (device-width : 375px)
 and (device-height : 812px)
 and (-webkit-device-pixel-ratio : 3) {
   .close-button {
-    margin-top: 28.5px;
+    margin-top: 21.25px;
+    margin-right: 21.25px;
   }
-  .close-button-container {
-    height: 77px;
+  .add-to-cart-btn-wrapper-mobile {
+    padding-bottom: 40px;
   }
 }
 
@@ -278,8 +286,9 @@ and (-webkit-device-pixel-ratio : 3) {
 and (device-width : 375px)
 and (device-height : 667px)
 and (-webkit-device-pixel-ratio : 2) {
-  .close-button-wrapper {
-    height: 44px;
+  .close-button {
+    margin-top: 21.25px;
+    margin-right: 21.25px;
   }
 }
 
@@ -288,15 +297,17 @@ and (-webkit-device-pixel-ratio : 2) {
 and (device-width : 414px)
 and (device-height : 736px)
 and (-webkit-device-pixel-ratio : 3) {
-  .close-button-wrapper {
-    height: 44px;
+  .close-button {
+    margin-top: 31px;
+    margin-right: 31px;
   }
 }
 
 // iPhone 5
 @media (max-width: 320px) {
-  .close-button-wrapper {
-    height: 44px;
+  .close-button {
+    margin-top: 7.5px;
+    margin-right: 7.5px;
   }
 }
 
